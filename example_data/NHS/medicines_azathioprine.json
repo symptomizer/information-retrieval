@@ -1,0 +1,513 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Azathioprine",
+  "copyrightHolder": {
+    "name": "Crown Copyright",
+    "@type": "Organization"
+  },
+  "license": "https://developer.api.nhs.uk/terms",
+  "author": {
+    "url": "https://www.nhs.uk",
+    "logo": "https://www.nhs.uk/nhscwebservices/documents/logo1.jpg",
+    "email": "nhswebsite.servicedesk@nhs.net",
+    "@type": "Organization",
+    "name": "NHS website"
+  },
+  "about": {
+    "@type": "WebPage",
+    "name": "Azathioprine",
+    "alternateName": []
+  },
+  "description": "Azathioprine is an immunosuppressant used to treat conditions such as rheumatoid arthritis and Crohn's disease or after an organ transplant.",
+  "url": "https://api.nhs.uk/medicines/azathioprine/",
+  "lastReviewed": ["2020-02-26T00:00:00+00:00", "2023-02-26T00:00:00+00:00"],
+  "breadcrumb": {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 0,
+        "item": {
+          "@id": "https://api.nhs.uk/medicines/",
+          "name": "Medicines A to Z",
+          "genre": "medicine"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://api.nhs.uk/medicines/azathioprine/",
+          "name": "Azathioprine",
+          "genre": "medicine"
+        }
+      }
+    ]
+  },
+  "dateModified": "2020-12-29T17:50:09+00:00",
+  "genre": "medicine",
+  "mainEntityOfPage": [
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 0,
+      "@type": "WebPageElement",
+      "headline": "About azathioprine",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Azathioprine is a type of medicine called an immunosuppressant. Immunosuppressants help &quot;calm&quot; (or control) your body&#x27;s immune system.</p><p>This medicine helps treat inflammatory conditions such as:</p><ul><li><a href=\"/conditions/rheumatoid-arthritis/\">rheumatoid arthritis</a></li><li><a href=\"/conditions/crohns-disease/\">Crohn&#x27;s disease</a> and <a href=\"/conditions/ulcerative-colitis/\">ulcerative colitis</a></li><li>severe inflammation of the liver, skin or arteries</li><li>some blood disorders</li></ul><p>If you have had a transplant, taking azathioprine can prevent your body from rejecting your new organ.</p><p>Azathioprine is sometimes also used to treat conditions that affect the skin, such as <a href=\"/conditions/lupus/\">lupus</a> or <a href=\"/conditions/atopic-eczema/\">atopic eczema</a>.</p><p>Azathioprine is available on prescription only. You will usually be prescribed this medicine by a specialist doctor.</p><p>It comes as tablets. It is also available as an injection, but this is usually only given in hospital.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        },
+        {
+          "position": 1,
+          "@type": "WebPageElement",
+          "name": "Callout",
+          "identifier": "4",
+          "text": "<h3>NHS coronavirus advice</h3><p>As long as you have no symptoms of coronavirus infection, carry on taking your prescribed immunosuppressant medicine as usual.<br/></p><p>If you develop any coronavirus symptoms, talk to your specialist doctor urgently. They will tell you if you need to stop treatment until these symptoms get better.<br/></p><p>Updated: 20 March 2020</p>"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 1,
+      "@type": "WebPageElement",
+      "headline": "Key facts",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<ul><li>You&#x27;ll have regular blood tests before and during your treatment.</li><li>Depending on why you&#x27;re taking it, you&#x27;ll usually notice an improvement in your condition after a few weeks.</li><li>Ask your doctor for urgent advice if you have been in contact with anyone who has chickenpox or shingles while taking azathioprine.</li><li>Use a sunscreen while taking azathioprine, as this medicine can make your skin more sensitive to sunlight.</li></ul>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 2,
+      "@type": "WebPageElement",
+      "headline": "Who can and cannot take azathioprine",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Most adults and children can take azathioprine. You will have a blood test before you start taking this medicine to make sure it is safe for you.</p><p>This medicine is not suitable for some people. <b>Tell your doctor before taking this medicine if you:</b></p><ul><li>have had an allergic reaction to azathioprine or any other medicines (including mercaptopurine, a medicine for treating blood cancer)</li><li>have an infection or a high temperature, or generally feel unwell</li><li>have any unusual bleeding or bruising</li><li>have ever had any liver problems</li><li>have ever had cancer</li><li>have a condition that affects your bone marrow</li><li>are due to have surgery involving muscle relaxants</li><li>have Lesch Nyhan syndrome, or a rare inherited condition affecting your NUDT15 gene</li><li>have ever been told that your body produces too little thiopurine methyltransferase (TMT, an enzyme)</li><li>are pregnant or trying for a baby</li></ul>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 3,
+      "@type": "WebPageElement",
+      "headline": "How and when to take it",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Always follow your doctor&#x27;s instructions for how to take azathioprine.</p><p>Swallow the tablets whole, with a drink of water. Do not chew them.</p><p>You&#x27;ll usually take your tablets once or twice a day. You can take them with or without food.</p><h3>Dosage</h3><p>Your dose depends on your body weight and why you need to take azathioprine. Your doctor will tell you how much to take.</p><h4>After a transplant</h4><p>The usual dose on the 1st day is up to 5mg for each kilogram you weigh.</p><p>From day 2 onwards, you&#x27;ll take 1mg to 4mg for each kilogram you weigh. You&#x27;ll usually need to take this medicine long term, probably for the rest of your life.</p><h4>For other conditions</h4><p>The usual starting dose is 1mg to 3mg each day, for each kilogram you weigh.</p><p>Your doctor may lower your dose as your condition gets better.</p><p>However, it takes a while for azathioprine to work. You may have to wait a few months to see an improvement.</p><h3>Regular blood tests during treatment</h3><p>Taking azathioprine can sometimes affect your liver, kidneys or bone marrow.</p><p>You will have blood tests to check your liver function, kidney function and blood count before you start taking this medicine.</p><p>From week 1 to week 8 of your treatment you&#x27;ll have blood tests every week. This is particularly important if you&#x27;re taking a high dose, or you have kidney or liver problems.</p><p>From week 9 onwards you will have blood tests less often. Your doctor will decide how often you need them. You may only need them every few months.</p><p>It&#x27;s important to have ongoing monitoring for as long as you&#x27;re taking this medicine.</p><h3>What if I forget to take a dose?</h3><p>Check with your doctor or a pharmacist if you miss 2 doses or more.</p><p>If you forget to take 1 dose, take it as soon as you remember, unless it&#x27;s almost time for the next dose. In this case, skip the missed dose and take the next one at the usual time.</p><p>Do not take a double dose to make up for a missed dose.</p><p>If you forget doses often, it may help to set an alarm to remind you. You could also ask a pharmacist for advice on other ways to help you remember to take your medicine.</p><h3>What if I take too much?</h3><p></p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        },
+        {
+          "position": 1,
+          "@type": "WebPageElement",
+          "name": "Urgent",
+          "identifier": "5",
+          "text": "<h3>Contact your doctor or specialist for advice immediately if:</h3><div class=\"block-richtext\"><ul><li>you take more than your prescribed dose of azathioprine (even if you feel well)</li></ul></div>"
+        },
+        {
+          "position": 2,
+          "@type": "WebPageElement",
+          "name": "Emergency",
+          "identifier": "5",
+          "text": "<h4>Call 999 or go to A&E now if:</h4><div class=\"block-richtext\"><ul><li>you take too much azathioprine and feel unwell</li></ul></div>"
+        },
+        {
+          "position": 3,
+          "identifier": "1",
+          "text": "<p>If you need to go to hospital, take the medicine packet or leaflet inside it, plus any remaining medicine, with you.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 4,
+      "@type": "WebPageElement",
+      "headline": "Side effects",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Like all medicines, azathioprine can cause side effects, but not everyone gets them.</p><h3>Common side effects</h3><p>These common side effects happen in more than 1 in 10 people (when you first start treatment or when your dose is increased).</p><p>Tell your doctor if these side effects bother you or do not go away:</p><ul><li>feeling sick (mild nausea)</li><li>headaches</li></ul><h3>Serious side effects</h3><p>Some people can have serious side effects when taking azathioprine.</p><p>Stop taking your medicine and contact your specialist or a doctor immediately if:</p><ul><li>you feel tired all the time, dizzy or sick, or you are vomiting or have diarrhoea</li><li>you have a high temperature with shivering or chills, cough or a sore throat</li><li>you get a rash or notice any changes to your skin, such as blisters or peeling</li><li>your joints or muscles are hurting</li><li>your pee changes colour or you start peeing more or less than usual (this can be a sign of kidney problems)</li><li>you feel confused, lightheaded or weak (these can be signs of <a href=\"/conditions/low-blood-pressure-hypotension/\">low blood pressure</a>)</li><li>you&#x27;re bleeding or bruising more easily than usual</li><li>you notice lumps anywhere on your body</li><li>you have severe stomach ache (abdominal pain) and back pain</li></ul><h4>Serious allergic reaction</h4><p>In rare cases, it&#x27;s possible to have a serious allergic reaction (<a href=\"/conditions/anaphylaxis/\">anaphylaxis</a>) to azathioprine.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        },
+        {
+          "position": 1,
+          "@type": "WebPageElement",
+          "name": "Emergency",
+          "identifier": "5",
+          "text": "<h4>Call 999 or go to A&E if:</h4><div class=\"block-richtext\"><ul><li>you get a skin rash that may include itchy, red, swollen, blistered or peeling skin</li><li>you&#x27;re wheezing</li><li>you get tightness in the chest or throat</li><li>you have trouble breathing or talking</li><li>your mouth, face, lips, tongue or throat start swelling</li></ul><p>You could be having a serious allergic reaction and may need immediate treatment in hospital.</p></div>"
+        },
+        {
+          "position": 2,
+          "identifier": "1",
+          "text": "<p>These are not all the side effects of azathioprine. For a full list, see the leaflet inside your medicine packet.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        },
+        {
+          "position": 3,
+          "@type": "WebPageElement",
+          "name": "Information",
+          "identifier": "3",
+          "text": "<p>You can report any suspected side effect to the <a href=\"https://yellowcard.mhra.gov.uk/\">UK safety scheme</a>.</p>"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 5,
+      "@type": "WebPageElement",
+      "headline": "How to cope with side effects",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>What to do about:</p><ul><li>feeling sick – stick to simple meals and do not eat rich or spicy food while you&#x27;re taking this medicine. It might help to take azathioprine after you have had a meal or snack.</li><li>headaches – make sure you rest and drink plenty of fluids. Do not drink too much alcohol. Ask a pharmacist to recommend a painkiller.</li></ul><p>These side effects are more likely when you first start taking azathioprine or when your dose is increased. You will usually feel better after a week or so.</p><p>Talk to your doctor if these side effects do not go away or they get worse.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 6,
+      "@type": "WebPageElement",
+      "headline": "Pregnancy and breastfeeding",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<h3>Azathioprine and pregnancy</h3><p>Azathioprine is not recommended in pregnancy by the manufacturer. This appears in the leaflet that comes with your medicine.</p><p>However, there is no strong evidence that it can harm your baby.</p><p>If you become pregnant, do not stop taking your medicine and speak to your doctor. They’ll review your treatment and tell you if it’s OK to keep taking azathioprine. In most cases, it’s safe to take during pregnancy.</p><p>It’s important for you to stay healthy while you are pregnant. For this reason, you will need to keep taking your medicine if you have an autoimmune condition or have had an organ transplant.</p><p>As azathioprine affects your immune system, it means that after your baby is born, there’s a very small risk it can affect the way they fight infections.</p><p>If your baby is unwell, speak to a doctor, your midwife or health visitor and ask for advice. It is important to tell them that you took azathioprine during pregnancy.</p><h3>Azathioprine and breastfeeding</h3><p>Small amounts of azathioprine may pass into your breast milk.</p><p>However if your doctor or health visitor says your baby is healthy, then it’s OK to take azathioprine when breastfeeding.</p><p>It has been taken by many breastfeeding mothers without any problems and extra monitoring is not usually required. If your baby requires any additional tests, the hospital neonatal team will let you know.</p><p>If you notice that your baby isn&#x27;t feeding as well as usual, or if you have any other concerns about your baby, talk to your health visitor, midwife or doctor as soon as possible.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 7,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>For more information about how azathioprine can affect you and your baby during pregnancy, <a href=\"http://www.medicinesinpregnancy.org/Medicine--pregnancy/Aciclovir/\">read this leaflet on the best use of medicines in pregnancy (BUMPs) website</a>.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 8,
+      "@type": "WebPageElement",
+      "headline": "Cautions with other medicines",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Azathioprine can affect the way some medicines work. Other medicines can also affect the way azathioprine works.</p><p><b>Tell your doctor or a pharmacist if you:</b></p><ul><li>take <a href=\"https://api.nhs.uk/medicines/allopurinol/\">allopurinol</a> (a medicine mainly used for gout)</li><li>take ciclosporin or tacrolimus (immunosuppressant medicines)</li><li>take <a href=\"https://api.nhs.uk/medicines/warfarin/\">warfarin</a> (used to prevent blood clots)</li><li>are having chemotherapy (used to treat cancer)</li><li>are going to have any type of surgery – tell your doctor or anaesthetist that you take azathioprine beforehand</li><li>have recently had or are due to have any <a href=\"/conditions/vaccinations/\">vaccinations</a> (especially a &quot;live&quot; vaccine)</li></ul><p>Children taking azathioprine must not have a &quot;live&quot; flu vaccine (this usually applies to children aged 2 to 17 years). Adults are given an &quot;inactivated&quot; flu vaccine and this usually causes no problems with azathioprine.</p><h3>Mixing azathioprine with herbal remedies and supplements</h3><p>There&#x27;s very little information about taking herbal remedies and supplements with azathioprine.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        },
+        {
+          "position": 1,
+          "@type": "WebPageElement",
+          "name": "Callout",
+          "identifier": "4",
+          "text": "<h3>Important</h3><p>For safety, tell your doctor or pharmacist if you&#x27;re taking any other medicines, including herbal remedies, vitamins or supplements.</p>"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 9,
+      "@type": "WebPageElement",
+      "headline": "Common questions",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Azathioprine is a type of medicine called an immunosuppressant. These medicines work by suppressing or &quot;calming&quot; your immune system. This means your immune system becomes weaker.</p><p>If you take azathioprine for an inflammatory or autoimmune condition, it slows down the production of new cells in your body’s immune system. This helps reduce the inflammation that causes swollen and stiff joints in rheumatoid arthritis or damage to your bowel in Crohn&#x27;s disease.</p><p>After a transplant, your body will try to attack the new organ as it sees it as &quot;foreign&quot;. By suppressing your immune system, azathioprine helps stop your body rejecting a new organ.</p><p>Azathioprine is not a painkiller, but as a result of reducing the inflammation caused by conditions such as rheumatoid arthritis, you may have less pain.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "How does azathioprine work?",
+          "identifier": "12"
+        },
+        {
+          "position": 1,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Azathioprine starts to work gradually.</p><p>For inflammatory conditions such as rheumatoid arthritis and Crohn&#x27;s disease, it can take up to 12 weeks of taking the &quot;right&quot; adjusted dose before you notice any benefits. For some skin conditions it can take several months or more.</p><p>It&#x27;s important to keep taking azathioprine. You may not feel any different at first, however azathioprine is likely to be working.</p><p>If you take it after a transplant you will not notice any benefits from the medicine itself. However, as the transplanted organ begins to work, you will usually begin to feel a lot better. Azathioprine will help to keep your new organ working properly.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "How long does it take to work?",
+          "identifier": "12"
+        },
+        {
+          "position": 2,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Many people will take this medicine for a long time. If you have had an organ transplant, you&#x27;ll probably take it for the rest of your life.</p><p>You will have regular blood tests while taking azathioprine. These blood tests will ensure that any concerns or problems are found quickly.</p><p>Taking azathioprine for a long time can increase your chance of getting certain types of cancer, including skin cancer. For this reason, avoid strong sunlight and use a sunscreen (SPF 30 or more), and wear clothes that cover your arms and legs.</p><p>Speak to your doctor if you&#x27;re worried about any of this.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Can I take it long term?",
+          "identifier": "12"
+        },
+        {
+          "position": 3,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>After an organ transplant you will usually need a combination of medicines that suppress your immune system.</p><p>This combination will be adjusted gradually in the months after your operation. This depends on how well your new organ is working and whether you have any side effects from the medicines.</p><p>If you need more than 1 kind of immunosuppressant therapy or medicine, there&#x27;s risk that your immune system can become too weak.</p><p>For this reason, your doctor will prescribe the lowest level of therapy or lowest dose of medicine that works for you.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Can I take other immunosuppressants with azathioprine?",
+          "identifier": "12"
+        },
+        {
+          "position": 4,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>There are several different treatments that can help the symptoms of inflammatory conditions. These include medicines, other types of therapy and even surgery.</p><p>Your doctor will be able to recommend the best treatment for you, based on your condition and your symptoms.</p><p><b>Treatments for rheumatoid arthritis</b></p><ul><li>medicines such as methotrexate, <a href=\"/conditions/biological-and-biosimilar-medicines/\">biological medicines</a> (made from proteins and other substances produced by the body) and <a href=\"/conditions/steroids/\">steroids</a></li><li>painkillers, including <a href=\"/conditions/nsaids/\">non-steroidal anti-inflammatory drugs</a> (NSAIDs)</li><li>supportive treatments, including <a href=\"/conditions/physiotherapy/\">physiotherapy</a></li><li>surgery, including joint replacement</li><li>complementary therapies, including acupuncture</li></ul><p><b>Treatments for Crohn&#x27;s disease</b></p><ul><li>steroids, such as <a href=\"https://api.nhs.uk/medicines/prednisolone/\">prednisolone</a></li><li>immunosuppressants such as methotrexate</li><li>biological medicines such as <a href=\"https://api.nhs.uk/medicines/adalimumab/\">adalimumab</a></li><li>surgery to remove an inflamed section of bowel</li><li>a liquid diet (enteral nutrition), suitable for children and young adults</li></ul>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Are there other treatments for inflammatory conditions?",
+          "identifier": "12"
+        },
+        {
+          "position": 5,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Alcohol does not affect the way azathioprine works. However, both azathioprine and alcohol can affect your liver.</p><p>For this reason it is even more important to stick to the national guidelines of drinking no more than 14 units a week for men and women.</p><p>A standard glass of wine (175ml) is 2 units of alcohol. A pint of lager or beer is 2 to 3 units of alcohol.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Can I drink alcohol with it?",
+          "identifier": "12"
+        },
+        {
+          "position": 6,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Apart from limiting alcohol, you can eat and drink normally.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Is there any food or drink I need to avoid?",
+          "identifier": "12"
+        },
+        {
+          "position": 7,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>There&#x27;s no clear evidence to suggest that taking azathioprine will reduce fertility in either men or women.</p><p>However, speak to your doctor if you are pregnant or trying for a baby.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Will it affect my fertility?",
+          "identifier": "12"
+        },
+        {
+          "position": 8,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Azathioprine does not affect any type of contraception, including the <a href=\"/conditions/contraception/combined-contraceptive-pill/\">combined pill</a> and <a href=\"/conditions/contraception/emergency-contraception/\">emergency contraception</a>.</p><p>If you are vomiting or have severe diarrhoea for more than 24 hours, your contraceptive pills may not protect you from pregnancy. Look on the pill packet to find out what to do.</p><p>Read more about <a href=\"/conditions/contraception/pill-sick-vomit-diarrhoea/\">what to do if you&#x27;re on the pill and you&#x27;re being sick or have diarrhoea</a>.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Will it affect my contraception?",
+          "identifier": "12"
+        },
+        {
+          "position": 9,
+          "@type": "Question",
+          "name": "chq",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "mainEntity": [
+              {
+                "position": 0,
+                "identifier": "1",
+                "text": "<p>Some people can feel weak, dizzy or lightheaded when taking azathioprine.</p><p>If you get any symptoms that affect your ability to concentrate, do not drive or cycle until you feel better.</p>",
+                "@type": "WebPageElement",
+                "name": "markdown"
+              }
+            ]
+          },
+          "text": "Can I drive or ride a bike?",
+          "identifier": "12"
+        }
+      ]
+    }
+  ],
+  "relatedLink": [
+    {
+      "name": "Crohn's disease",
+      "url": "/conditions/crohns-disease/",
+      "description": "Link to Related Condition",
+      "linkRelationship": "Related Condition",
+      "@type": "Link Role"
+    },
+    {
+      "name": "Rheumatoid arthritis",
+      "url": "/conditions/rheumatoid-arthritis/",
+      "description": "Link to Related Condition",
+      "linkRelationship": "Related Condition",
+      "@type": "Link Role"
+    },
+    {
+      "name": "Ulcerative colitis",
+      "url": "/conditions/ulcerative-colitis/",
+      "description": "Link to Related Condition",
+      "linkRelationship": "Related Condition",
+      "@type": "Link Role"
+    },
+    {
+      "name": "HealthUnlocked: azathioprine forum",
+      "url": "https://healthunlocked.com/tag/azathioprine",
+      "description": "Link to Useful Resource",
+      "linkRelationship": "Useful Resource",
+      "@type": "Link Role"
+    },
+    {
+      "name": "Arthritis Action",
+      "url": "https://www.arthritisaction.org.uk/",
+      "description": "Link to Useful Resource",
+      "linkRelationship": "Useful Resource",
+      "@type": "Link Role"
+    },
+    {
+      "name": "British Skin Foundation",
+      "url": "https://www.britishskinfoundation.org.uk/",
+      "description": "Link to Useful Resource",
+      "linkRelationship": "Useful Resource",
+      "@type": "Link Role"
+    },
+    {
+      "name": "Crohn's & Colitis UK",
+      "url": "https://www.crohnsandcolitis.org.uk/",
+      "description": "Link to Useful Resource",
+      "linkRelationship": "Useful Resource",
+      "@type": "Link Role"
+    }
+  ]
+}

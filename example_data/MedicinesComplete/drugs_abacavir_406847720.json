@@ -1,0 +1,120 @@
+{
+  "clz": "ContentApiResponse",
+  "lockedPublications": { "clz": "LockedPublications", "locked": [] },
+  "related": [],
+  "contentResponse": {
+    "clz": "ContentResponse",
+    "navigation": [
+      {
+        "clz": "NavItem",
+        "fragment": "pot-indicationsDose",
+        "external": false,
+        "title": "Indications and dose",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-cautions",
+        "external": false,
+        "title": "Cautions",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-interactions",
+        "external": false,
+        "title": "Interactions",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-sideEffects",
+        "external": false,
+        "title": "Side-effects",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-allergyAndCrossSensitivity",
+        "external": false,
+        "title": "Allergy and cross-sensitivity",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-pregnancy",
+        "external": false,
+        "title": "Pregnancy",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-hepaticImpairment",
+        "external": false,
+        "title": "Hepatic impairment",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-renalImpairment",
+        "external": false,
+        "title": "Renal impairment",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-screening",
+        "external": false,
+        "title": "Pre-treatment screening",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-monitoringRequirements",
+        "external": false,
+        "title": "Monitoring requirements",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-prescribingAndDispensingInformation",
+        "external": false,
+        "title": "Prescribing and dispensing information",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-patientAndCarerAdvice",
+        "external": false,
+        "title": "Patient and carer advice",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-medicines",
+        "external": false,
+        "title": "Medicinal forms",
+        "browse": false
+      },
+      {
+        "clz": "NavItem",
+        "fragment": "pot-relatedDrugs",
+        "external": false,
+        "title": "Other drugs in class",
+        "browse": false
+      }
+    ],
+    "link": {
+      "clz": "PageLink",
+      "rcSearchTerms": ["abacavir"],
+      "pageType": { "clz": "PageType", "title": "Drug", "key": "drug" },
+      "publication": "bnf",
+      "plainTitle": "Abacavir",
+      "id": "_406847720",
+      "title": "Abacavir"
+    },
+    "dates": "<p>Last Update: 17-Nov-2020</p>",
+    "body": "<div id=\"pot-indicationsDose\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Indications and dose</h2> \n  <div class=\"indication-dose-group\"> \n   <div class=\"therapeutic-indications\"> \n    <p class=\"therapeutic-indication\">HIV infection in combination with other antiretroviral drugs</p> \n   </div> \n   <p class=\"routes-of-admin\">By mouth</p> \n   <div class=\"dose adult\"> \n    <p class=\"patient-group\">Adult</p> \n    <p class=\"dose-statement\">600&nbsp;mg daily in 1–2 divided doses.</p> \n   </div> \n  </div> \n </div>\n</div>\n<div id=\"pot-cautions\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Cautions</h2> \n  <p>HIV load greater than 100&nbsp;000 copies/mL; patients at high risk of cardiovascular disease</p> \n </div>\n</div>\n<div id=\"pot-interactions\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Interactions</h2>List of individual interactants: \n  <a title=\"abacavir\" href=\"/#/content/bnf/_406847720_interactions\">abacavir</a>\n </div>\n</div>\n<div id=\"pot-sideEffects\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Side-effects</h2> \n  <h3 class=\"extra-bnf-heading\">For all <span class=\"text-uppercase\">nucleoside reverse transcriptase inhibitors</span>:</h3> \n  <h4>Common or very common</h4>\n  <p>Abdominal pain; anaemia (may require transfusion); asthenia; diarrhoea; dizziness; fever; flatulence; headache; insomnia; nausea; neutropenia; skin reactions; vomiting</p>\n  <h4>Uncommon</h4>\n  <p>Angioedema; pancreatitis</p>\n  <h4>Rare or very rare</h4>\n  <p>Lactic acidosis</p>\n  <h4>Frequency not known</h4>\n  <p>Immune reconstitution inflammatory syndrome; osteonecrosis; weight increased</p> \n  <h3>Side-effects, further information</h3> \n  <p>Osteonecrosis has been reported in patients with advanced HIV disease or following long-term exposure to combination antiretroviral therapy.</p> \n  <h3 class=\"extra-bnf-heading\">For <span class=\"text-uppercase\">abacavir</span>:</h3> \n  <h4>Common or very common</h4>\n  <p>Appetite decreased; lethargy</p>\n  <h4>Rare or very rare</h4>\n  <p>Severe cutaneous adverse reactions (SCARs)</p>\n  <h4>Frequency not known</h4>\n  <p>Hypersensitivity</p> \n  <h3>Side-effects, further information</h3> \n  <p>Life-threatening hypersensitivity reactions have been reported- characterised by fever or rash and possibly nausea, vomiting, diarrhoea, abdominal pain, dyspnoea, cough, lethargy, malaise, headache, and myalgia; less frequently mouth ulceration, oedema, hypotension, sore throat, acute respiratory distress syndrome, anaphylaxis, paraesthesia, arthralgia, conjunctivitis, lymphadenopathy, lymphocytopenia and renal failure; rarely myolysis. Laboratory abnormalities may include raised liver function tests and creatine kinase; symptoms usually appear in the first 6 weeks, but may occur at any time. Discontinue immediately if any symptom of hypersensitivity develops and do not rechallenge (risk of more severe hypersensitivity reaction). </p> \n </div>\n</div>\n<div id=\"pot-allergyAndCrossSensitivity\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Allergy and cross-sensitivity</h2> \n  <p><span> <span class=\"evidence-grading\">Caution—increased risk of hypersensitivity reaction in presence of HLA-B*5701 allele.</span> <span class=\"evidence-grading-label\"><a class=\"evidence-grading-link tooltipstered\" href=\"/#/content/bnf/PHP98621\" title=\"Manufacturer information\">M</a></span> </span></p> \n </div>\n</div>\n<div id=\"pot-pregnancy\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Pregnancy</h2> \n  <h3 class=\"extra-bnf-heading\">For all <span class=\"text-uppercase\">nucleoside reverse transcriptase inhibitors</span>:</h3> \n  <h3>Monitoring in pregnancy</h3> \n  <p>Mitochondrial dysfunction has been reported in infants exposed to nucleoside reverse transcriptase inhibitors in utero; the main effects include haematological, metabolic, and neurological disorders; all infants whose mothers received nucleoside reverse transcriptase inhibitors during pregnancy should be monitored for relevant signs or symptoms.</p> \n </div>\n</div>\n<div id=\"pot-hepaticImpairment\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Hepatic impairment</h2> \n  <h3 class=\"extra-bnf-heading\">For all <span class=\"text-uppercase\">nucleoside reverse transcriptase inhibitors</span>:</h3> \n  <p>In general, manufacturers advise caution in patients with chronic hepatitis B or C (increased risk of hepatic side-effects).</p> \n  <h3 class=\"extra-bnf-heading\">For <span class=\"text-uppercase\">abacavir</span>:</h3> \n  <p>Manufacturer advises caution in mild impairment; consider avoiding in moderate to severe impairment (no information available).</p> \n </div>\n</div>\n<div id=\"pot-renalImpairment\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Renal impairment</h2> \n  <p>Manufacturer advises avoid in end-stage renal disease.</p> \n </div>\n</div>\n<div id=\"pot-screening\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Pre-treatment screening</h2> \n  <p>Test for HLA-B*5701 allele before treatment or if restarting treatment and HLA-B*5701 status not known.</p> \n </div>\n</div>\n<div id=\"pot-monitoringRequirements\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Monitoring requirements</h2> \n  <p>Monitor for symptoms of hypersensitivity reaction every 2 weeks for 2 months.</p> \n </div>\n</div>\n<div id=\"pot-prescribingAndDispensingInformation\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Prescribing and dispensing information</h2> \n  <p>Flavours of oral liquid formulations may include banana, or strawberry.</p> \n </div>\n</div>\n<div id=\"pot-patientAndCarerAdvice\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Patient and carer advice</h2> \n  <p>Patients and their carers should be told the importance of regular dosing (intermittent therapy may increase the risk of sensitisation), how to recognise signs of hypersensitivity, and advised to seek immediate medical attention if symptoms develop or before re-starting treatment.</p> \n  <p>Patients should be provided with an alert card and advised to keep it with them at all times.</p> \n </div>\n</div>\n<div id=\"pot-medicines\" class=\"monograph-content pot-bnf\">\n <div>\n  <h2>Medicinal forms</h2> \n  <div id=\"medicines\" class=\"monograph-content medicines\"> \n   <p>There can be variation in the licensing of different medicines containing the same drug.</p> \n   <div id=\"Tablet\" class=\"medicinal-form\"> \n    <div class=\"medicinal-form-header\"> \n     <h3>Tablet</h3> \n    </div> \n    <div class=\"medicinal-form-content\"> \n     <div id=\"DMD37540011000001107\" class=\"medicinal-form-content-prep\"> \n      <h4>Abacavir 300mg tablets (Dr Reddy's Laboratories (UK) Ltd) </h4> \n      <div class=\"packs\"> \n       <p>Abacavir (as Abacavir sulfate) 300 mg</p> \n       <ul> \n        <li> <p>60 tablet <img src=\"/assets/images/content/pom.png\" srcset=\"/assets/images/content/pom.png 1x, /assets/images/content/pom-2x.png 2x\" alt=\"prescription only medicine\" title=\"prescription only medicine\"> </p> <p>NHS indicative price = £177.60 (Hospital only)</p> <p></p> </li> \n       </ul> \n      </div> \n     </div> \n     <div id=\"DMD36807311000001103\" class=\"medicinal-form-content-prep\"> \n      <h4>Abacavir 300mg tablets (Mylan) </h4> \n      <div class=\"packs\"> \n       <p>Abacavir (as Abacavir sulfate) 300 mg</p> \n       <ul> \n        <li> <p>60 tablet <img src=\"/assets/images/content/pom.png\" srcset=\"/assets/images/content/pom.png 1x, /assets/images/content/pom-2x.png 2x\" alt=\"prescription only medicine\" title=\"prescription only medicine\"> </p> <p>NHS indicative price = £177.61 (Hospital only)</p> <p></p> </li> \n       </ul> \n      </div> \n     </div> \n     <div id=\"DMD4442611000001100\" class=\"medicinal-form-content-prep\"> \n      <h4>Ziagen 300mg tablets (ViiV Healthcare UK Ltd) </h4> \n      <div class=\"packs\"> \n       <p>Abacavir (as Abacavir sulfate) 300 mg</p> \n       <ul> \n        <li> <p>60 tablet <img src=\"/assets/images/content/pom.png\" srcset=\"/assets/images/content/pom.png 1x, /assets/images/content/pom-2x.png 2x\" alt=\"prescription only medicine\" title=\"prescription only medicine\"> </p> <p>NHS indicative price = £208.95 (Hospital only)</p> <p></p> </li> \n       </ul> \n      </div> \n     </div> \n    </div> \n   </div> \n   <div id=\"Oral-solution\" class=\"medicinal-form\"> \n    <div class=\"medicinal-form-header\"> \n     <h3>Oral solution</h3> \n    </div> \n    <div class=\"medicinal-form-content\"> \n     <h4>Excipients</h4> \n     <p>May contain propylene glycol.</p> \n     <div id=\"DMD4442911000001106\" class=\"medicinal-form-content-prep\"> \n      <h4>Ziagen 20mg/ml oral solution (ViiV Healthcare UK Ltd) </h4> \n      <div class=\"packs\"> \n       <p>Abacavir (as Abacavir sulfate) 20 mg per 1 ml</p> \n       <ul> \n        <li> <p>240 ml <img src=\"/assets/images/content/pom.png\" srcset=\"/assets/images/content/pom.png 1x, /assets/images/content/pom-2x.png 2x\" alt=\"prescription only medicine\" title=\"prescription only medicine\"> </p> <p>NHS indicative price = £55.72 (Hospital only)</p> <p></p> </li> \n       </ul> \n      </div> \n     </div> \n    </div> \n   </div> \n  </div> \n </div>\n</div>\n<div id=\"pot-relatedDrugs\" class=\"monograph-content pot-bnf\"> \n <h2>Other drugs in class</h2> \n <h3>Nucleoside reverse transcriptase inhibitors</h3> \n <ul> \n  <li><a href=\"/#/content/bnf/_226731979\">Abacavir with dolutegravir and lamivudine</a></li> \n  <li><a href=\"/#/content/bnf/_107868576\">Abacavir with lamivudine</a></li> \n  <li><a href=\"/#/content/bnf/_215737150\">Abacavir with lamivudine and zidovudine</a></li> \n  <li><a href=\"/#/content/bnf/_803255594\">Bictegravir with emtricitabine and tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_973977212\">Darunavir with cobicistat, emtricitabine and tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_948450554\">Efavirenz with emtricitabine and tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_229229363\">Elvitegravir with cobicistat, emtricitabine and tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_606015750\">Elvitegravir with cobicistat, emtricitabine and tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_285213616\">Emtricitabine</a></li> \n  <li><a href=\"/#/content/bnf/_992868168\">Emtricitabine with rilpivirine and tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_876718003\">Emtricitabine with rilpivirine and tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_340104957\">Emtricitabine with tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_180330626\">Emtricitabine with tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_570427226\">Lamivudine</a></li> \n  <li><a href=\"/#/content/bnf/_668757429\">Lamivudine with dolutegravir</a></li> \n  <li><a href=\"/#/content/bnf/_116762883\">Lamivudine with tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_833072222\">Lamivudine with tenofovir disoproxil and doravirine</a></li> \n  <li><a href=\"/#/content/bnf/_839713441\">Tenofovir alafenamide</a></li> \n  <li><a href=\"/#/content/bnf/_536885964\">Tenofovir disoproxil</a></li> \n  <li><a href=\"/#/content/bnf/_268555895\">Zidovudine</a></li> \n  <li><a href=\"/#/content/bnf/_354041109\">Zidovudine with lamivudine</a></li> \n </ul> \n</div>",
+    "doi": "https://doi.org/10.18578/BNF.406847720"
+  }
+}

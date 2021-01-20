@@ -1,0 +1,4075 @@
+{
+  "count": 282,
+  "interactions": [
+    {
+      "firstReactant": "Acebutolol",
+      "secondReactant": "Alcohol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Acebutolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Acenocoumarol",
+      "secondReactant": "Alcohol",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol (in those who drink heavily) potentially decreases the anticoagulant effect of Acenocoumarol. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Acitretin",
+      "secondReactant": "Alcohol",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol potentially increases the concentration of Acitretin. Manufacturer advises avoid and for 2 months after stopping <a href=\"/#/content/bnf/_129041829\" title=\"Acitretin\">Acitretin</a>.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Agomelatine",
+      "secondReactant": "Alcohol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Agomelatine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alectinib",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alectinib can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alfentanil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alfentanil can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alfuzosin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alfuzosin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alimemazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alimemazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Aliskiren",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Aliskiren can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alprazolam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alprazolam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Alprostadil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Alprostadil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Amantadine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Amantadine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Amisulpride",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Amisulpride can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Amitriptyline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Amitriptyline can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Amitriptyline can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Amlodipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Amlodipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Apomorphine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Apomorphine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Apraclonidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Apraclonidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Apraclonidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Aripiprazole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Aripiprazole can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Aripiprazole can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Articaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Articaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Asenapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Asenapine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Asenapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Asparaginase",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Asparaginase can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Atenolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Atenolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Atorvastatin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Atorvastatin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Avanafil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Avanafil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Azilsartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Azilsartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Baclofen",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Baclofen can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Baclofen can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bedaquiline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bedaquiline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bendroflumethiazide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bendroflumethiazide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Benperidol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Benperidol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Benperidol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Betaxolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Betaxolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bisoprolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bisoprolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bortezomib",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bortezomib can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Brimonidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Brimonidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Brimonidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bromocriptine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bromocriptine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Buclizine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Buclizine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bumetanide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bumetanide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Bupivacaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Bupivacaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Buprenorphine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Buprenorphine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cabergoline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cabergoline can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Canagliflozin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Canagliflozin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Candesartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Candesartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cannabidiol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cannabidiol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Captopril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Captopril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Carbamazepine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Carbamazepine can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cariprazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cariprazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cariprazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Carvedilol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Carvedilol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Celiprolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Celiprolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chloral hydrate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chloral hydrate can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chlordiazepoxide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlordiazepoxide can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chloroprocaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chloroprocaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chlorothiazide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlorothiazide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chlorphenamine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlorphenamine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chlorpromazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlorpromazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlorpromazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Chlortalidone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Chlortalidone can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cinnarizine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cinnarizine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clavulanate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clavulanate can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clemastine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clemastine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clobazam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clobazam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clomethiazole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clomethiazole can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol causes serious, potentially fatal, CNS depression when given with Clomethiazole. Manufacturer advises avoid.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clomipramine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clomipramine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clomipramine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clonazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clonazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clonidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clonidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clonidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Clozapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clozapine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Clozapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Codeine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Codeine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Crisantaspase",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Crisantaspase can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cyclizine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cyclizine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Cyproheptadine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Cyproheptadine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dactinomycin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dactinomycin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dantrolene",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dantrolene can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dapagliflozin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dapagliflozin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Demeclocycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Demeclocycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Desflurane",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Desflurane can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Desflurane can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dexmedetomidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dexmedetomidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Diamorphine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Diamorphine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Diazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Diazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Diazoxide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Diazoxide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dihydrocodeine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dihydrocodeine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Diltiazem",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Diltiazem can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dimethyl fumarate",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Theoretical",
+          "message": "<p class=\"interaction-message\">Alcohol (excessive consumption) potentially increases the risk of gastrointestinal adverse effects when given with Dimethyl fumarate. Manufacturer advises avoid.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dipipanone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dipipanone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dipyridamole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dipyridamole can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Disulfiram",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol causes an extremely unpleasant systemic reaction when given with Disulfiram. Manufacturer advises avoid for at least 24 hours before and up to 14 days after stopping treatment.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dosulepin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dosulepin can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dosulepin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Doxazosin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Doxazosin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Doxepin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Doxepin can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Doxepin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Doxycycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Doxycycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Dronabinol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Dronabinol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Droperidol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Droperidol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Droperidol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Empagliflozin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Empagliflozin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Enalapril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Enalapril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Eplerenone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Eplerenone can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Epoprostenol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Epoprostenol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Eprosartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Eprosartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ertugliflozin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ertugliflozin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Esketamine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Esketamine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Esketamine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Esmolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Esmolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Etomidate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Etomidate can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Etomidate can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Felodipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Felodipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Fentanyl",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fentanyl can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Flucloxacillin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Flucloxacillin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Fluconazole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fluconazole can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Flupentixol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Flupentixol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Flupentixol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Fluphenazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fluphenazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fluphenazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Flurazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Flurazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Fluvastatin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fluvastatin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Fosinopril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Fosinopril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Furosemide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Furosemide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Gabapentin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Gabapentin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Glyceryl trinitrate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Glyceryl trinitrate can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Griseofulvin",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Anecdotal",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Griseofulvin. Manufacturer advises caution.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Guanfacine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Guanfacine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Guanfacine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Haloperidol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Haloperidol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Haloperidol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Hydralazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Hydralazine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Hydrochlorothiazide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Hydrochlorothiazide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Hydroflumethiazide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Hydroflumethiazide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Hydromorphone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Hydromorphone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol causes rapid release of Hydromorphone (from extended-release preparations). Manufacturer advises avoid.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Hydroxyzine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Hydroxyzine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Iloprost",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Iloprost can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Imidapril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Imidapril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Imipramine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Imipramine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Imipramine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Indapamide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Indapamide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Indoramin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Indoramin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Irbesartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Irbesartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Isocarboxazid",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isocarboxazid can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Isoflurane",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isoflurane can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isoflurane can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Isoniazid",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isoniazid can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Isosorbide dinitrate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isosorbide dinitrate can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Isosorbide mononitrate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Isosorbide mononitrate can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Itraconazole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Itraconazole can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ketamine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ketamine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ketamine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ketoconazole",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Anecdotal",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Ketoconazole. Manufacturer advises avoid.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ketotifen",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ketotifen can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Labetalol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Labetalol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lacidipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lacidipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lamotrigine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lamotrigine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Leflunomide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Leflunomide can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lenalidomide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lenalidomide can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lercanidipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lercanidipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Levamisole",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Levamisole. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Levetiracetam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Levetiracetam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Levobunolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Levobunolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Levodopa",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Levodopa can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Levomepromazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Levomepromazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Levomepromazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lidocaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lidocaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lisinopril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lisinopril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lofepramine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lofepramine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lofepramine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lofexidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lofexidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lofexidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lomitapide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lomitapide can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Loprazolam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Loprazolam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lorazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lorazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lormetazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lormetazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Losartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Losartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Loxapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Loxapine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Loxapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lurasidone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lurasidone can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lurasidone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Lymecycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Lymecycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Melatonin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Melatonin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Mepivacaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Mepivacaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Meprobamate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Meprobamate can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Meptazinol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Meptazinol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Mercaptopurine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Mercaptopurine can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Metformin",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Theoretical",
+          "message": "<p class=\"interaction-message\">Alcohol (excessive consumption) potentially increases the risk of lactic acidosis when given with Metformin. Manufacturer advises avoid excessive alcohol consumption.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Methadone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methadone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Methocarbamol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methocarbamol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Methotrexate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methotrexate can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Methoxyflurane",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methoxyflurane can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methoxyflurane can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Methyldopa",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Methyldopa can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Metolazone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Metolazone can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Metoprolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Metoprolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Metronidazole",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Metronidazole. Manufacturer advises avoid for at least 48 hours stopping treatment.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Mianserin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Mianserin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Micafungin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Micafungin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Midazolam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Midazolam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Minocycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Minocycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Minoxidil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Minoxidil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Mirtazapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Mirtazapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Morphine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Morphine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol causes rapid release of Morphine (from extended-release preparations). Manufacturer advises avoid.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Moxisylyte",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Moxisylyte can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Moxonidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Moxonidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Moxonidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nabilone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nabilone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nadolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nadolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nebivolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nebivolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Neratinib",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Neratinib can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nicardipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nicardipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nicorandil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nicorandil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nifedipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nifedipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nimodipine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nimodipine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nitrazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nitrazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nitroprusside",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nitroprusside can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nitrous oxide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nitrous oxide can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nitrous oxide can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Nortriptyline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nortriptyline can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Nortriptyline can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Olanzapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Olanzapine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Olanzapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Olmesartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Olmesartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Oxazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Oxazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Oxycodone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Oxycodone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Oxytetracycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Oxytetracycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Paliperidone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Paliperidone can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Paliperidone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Paracetamol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Paracetamol can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol (in those who drink heavily) causes severe liver damage when given with Paracetamol. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pegaspargase",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pegaspargase can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pentazocine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pentazocine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Perampanel",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Perampanel can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pericyazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pericyazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pericyazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Perindopril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Perindopril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pethidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pethidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Phenelzine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Phenelzine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Phenobarbital",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Phenobarbital can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pimecrolimus",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol increases the risk of facial flushing and skin irritation when given with topical Pimecrolimus. Manufacturer advises caution.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pimozide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pimozide can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pimozide can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pindolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pindolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pizotifen",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pizotifen can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pramipexole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pramipexole can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pravastatin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pravastatin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Prazosin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Prazosin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Pregabalin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Pregabalin can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Prilocaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Prilocaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Primidone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Primidone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Procarbazine",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Anecdotal",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Procarbazine. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Prochlorperazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Prochlorperazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Prochlorperazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Promazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Promazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Promazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Promethazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Promethazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Propofol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Propofol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Propofol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Propranolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Propranolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Quetiapine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Quetiapine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Quetiapine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Quinagolide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Quinagolide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Quinapril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Quinapril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ramipril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ramipril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Remifentanil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Remifentanil can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Retigabine",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol potentially increases the risk of visual disturbances when given with Retigabine. Manufacturer advises caution.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Riociguat",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Riociguat can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Risperidone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Risperidone can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Risperidone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ropinirole",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ropinirole can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Ropivacaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Ropivacaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Rosuvastatin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Rosuvastatin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Rotigotine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Rotigotine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sacubitril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sacubitril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sapropterin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sapropterin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Selegiline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Selegiline can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sevoflurane",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sevoflurane can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sevoflurane can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sildenafil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sildenafil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Simvastatin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Simvastatin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sodium oxybate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sodium oxybate can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sodium oxybate can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sotalol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sotalol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Spironolactone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Spironolactone can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Streptozocin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Streptozocin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sulfasalazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sulfasalazine can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Sulpiride",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sulpiride can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Sulpiride can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tacrolimus",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol increases the risk of facial flushing and skin irritation when given with topical Tacrolimus. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tadalafil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tadalafil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tamsulosin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tamsulosin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tapentadol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tapentadol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Telmisartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Telmisartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Temazepam",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Temazepam can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Terazosin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Terazosin can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Teriflunomide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Teriflunomide can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tetrabenazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tetrabenazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tetracaine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tetracaine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tetracycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tetracycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Thalidomide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Thalidomide can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Thiopental",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Thiopental can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Thiopental can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tigecycline",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tigecycline can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Timolol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Timolol can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tinidazole",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Moderate",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Theoretical",
+          "message": "<p class=\"interaction-message\">Alcohol potentially causes a disulfiram-like reaction when given with Tinidazole. Manufacturer advises avoid for 72 hours stopping treatment.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tizanidine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tizanidine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tizanidine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Torasemide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Torasemide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Trabectedin",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trabectedin can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tramadol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tramadol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Trandolapril",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trandolapril can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Tranylcypromine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Tranylcypromine can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Trazodone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trazodone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Trifluoperazine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trifluoperazine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trifluoperazine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Trimipramine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trimipramine can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Trimipramine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Valproate",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Valproate can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Valsartan",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Valsartan can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Vardenafil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Vardenafil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Venlafaxine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Venlafaxine can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Verapamil",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Verapamil can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Vernakalant",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Vernakalant can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Vincristine",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Vincristine can increase the risk of hepatotoxicity.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Warfarin",
+      "additiveEffectsMessages": [],
+      "interactionMessages": [
+        {
+          "severity": "Severe",
+          "clz": "BnfInteractionMessage",
+          "evidence": "Study",
+          "message": "<p class=\"interaction-message\">Alcohol (in those who drink heavily) potentially decreases the anticoagulant effect of Warfarin. Manufacturer makes no recommendation.  </p>"
+        }
+      ]
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Xipamide",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Xipamide can increase the risk of hypotension.</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Zolpidem",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Zolpidem can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Zopiclone",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Zopiclone can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    },
+    {
+      "firstReactant": "Alcohol",
+      "secondReactant": "Zuclopenthixol",
+      "additiveEffectsMessages": [
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Zuclopenthixol can increase the risk of hypotension.</p>"
+        },
+        {
+          "severity": "Normal",
+          "clz": "BnfInteractionMessage",
+          "evidence": "",
+          "message": "<p class=\"interaction-message\">Both Alcohol and Zuclopenthixol can have CNS depressant effects, which might affect the ability to perform skilled tasks (see 'Drugs and Driving' in <a href=\"/#/content/bnf/PHP97234\" title=\"Guidance on Prescribing\">Guidance on Prescribing</a>).</p>"
+        }
+      ],
+      "interactionMessages": []
+    }
+  ],
+  "ontologyData": [
+    {
+      "clz": "OntologyData",
+      "narrowerTerms": ["beer and lager", "spirits", "wines"],
+      "originalTerm": "alcohol",
+      "synonyms": [
+        "_804725813",
+        "64-17-5",
+        "v03ab16",
+        "ethanolum (96 per centum)",
+        "aethanolum",
+        "エタノール",
+        "etanolis",
+        "46.07",
+        "алкоголь",
+        "d08ax08",
+        "industrial methylated spirit",
+        "etanol",
+        "alcohol etílico",
+        "alcoholic beverages",
+        "qv03az01",
+        "ethanolum",
+        "v03az01",
+        "551-f",
+        "etanol bezwodny",
+        "3k9958v90m",
+        "ethanol",
+        "無水エタノール (anhydrous)",
+        "ethyl alcohol",
+        "ethanol (96%)",
+        "этанол",
+        "c2h5oh",
+        "php8111",
+        "alkol",
+        "alcool",
+        "alcohol",
+        "éthanol",
+        "alcohol (beverage)",
+        "qv03ab16",
+        "etanoli",
+        "etanol (96%)",
+        "αιθανόλη",
+        "qd08ax08"
+      ],
+      "broaderTerms": [
+        "CYP2E1 inducers",
+        "antiseptics",
+        "beverages",
+        "cns depressants",
+        "disinfectants",
+        "neurolytics",
+        "organic solvents",
+        "preservatives",
+        "sclerosants"
+      ],
+      "ingredients": [],
+      "labels": ["alcoholic beverages", "alcohol"]
+    }
+  ],
+  "reactantValidities": [
+    {
+      "isPrep": false,
+      "clz": "OntologyTermValidityAndType",
+      "ontologyTermValidity": {
+        "clz": "OntologyTermValidity",
+        "originalOntologyTerm": "alcohol",
+        "validity": "valid"
+      }
+    }
+  ]
+}

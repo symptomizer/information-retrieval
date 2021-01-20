@@ -1,0 +1,262 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Atopic eczema",
+  "copyrightHolder": {
+    "name": "Crown Copyright",
+    "@type": "Organization"
+  },
+  "license": "https://developer.api.nhs.uk/terms",
+  "author": {
+    "url": "https://www.nhs.uk",
+    "logo": "https://www.nhs.uk/nhscwebservices/documents/logo1.jpg",
+    "email": "nhswebsite.servicedesk@nhs.net",
+    "@type": "Organization",
+    "name": "NHS website"
+  },
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Atopic eczema",
+    "alternateName": ["Eczema (atopic)"]
+  },
+  "description": "Read about atopic eczema (atopic dermatitis), a condition that causes the skin to become itchy, dry, cracked and sore.",
+  "url": "https://api.nhs.uk/conditions/atopic-eczema/",
+  "lastReviewed": ["2019-12-05T00:00:00+00:00", "2022-12-05T00:00:00+00:00"],
+  "breadcrumb": {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 0,
+        "item": {
+          "@id": "https://api.nhs.uk/conditions/",
+          "name": "Health A to Z",
+          "genre": "condition"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://api.nhs.uk/conditions/atopic-eczema/",
+          "name": "Atopic eczema",
+          "genre": "condition"
+        }
+      }
+    ]
+  },
+  "dateModified": "2020-08-10T07:53:22+00:00",
+  "genre": "condition",
+  "hasPart": [
+    {
+      "@type": "WebPageElement",
+      "name": "overview",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/#overview",
+      "description": "Atopic eczema is a common skin condition that causes patches of skin that are itchy, cracked and sore.",
+      "text": "<p>The main symptom of atopic eczema is patches of skin that are itchy, dry, cracked and sore.</p><p>You're more likely to get atopic eczema if you have allergies or other family members with conditions like atopic eczema, asthma or hay fever.</p><p>Treatments for atopic eczema include emollients (moisturising treatments) and steroid creams.</p>"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "symptoms",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/#symptoms",
+      "description": "The main symptom of atopic eczema is patches of skin that are itchy, dry, cracked and sore.",
+      "text": "<p>Atopic eczema causes the skin to become itchy, dry, cracked and sore.</p><p>Some people only have small patches of dry skin, but others may experience widespread inflamed skin all over the body.</p><p>Inflamed skin can become red on lighter skin, and darker brown, purple or grey on darker skin. This can also be more difficult to see on darker skin.</p><p>Although atopic eczema can affect any part of the body, it most often affects the hands, insides of the elbows, backs of the knees and the face and scalp in children.</p><p>People with atopic eczema usually have periods when symptoms are less noticeable, as well as periods when symptoms become more severe (flare-ups).</p>",
+      "title": "Symptoms of atopic eczema"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "causes",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/#causes",
+      "description": "You're more likely to get atopic eczema if you have allergies or other family members with conditions like atopic eczema, asthma or hay fever.",
+      "text": "<p>The exact cause of atopic eczema is unknown, but it's clear it is not down to one single thing.</p><p>Atopic eczema often occurs in people who get <a href=\"https://api.nhs.uk/conditions/allergies/\">allergies</a>. \"Atopic\" means sensitivity to allergens.</p><p>It can run in families, and often develops alongside other conditions, such as <a href=\"https://api.nhs.uk/conditions/asthma/\">asthma</a> and <a href=\"https://api.nhs.uk/conditions/hay-fever/\">hay fever</a>.</p><p>The symptoms of atopic eczema often have certain triggers, such as soaps, detergents, stress and the weather. </p><p>Sometimes <a href=\"https://api.nhs.uk/conditions/food-allergy/\">food allergies</a> can play a part, especially in young children with severe eczema.</p><p>You may be asked to keep a food diary to try to determine whether a specific food makes your symptoms worse.</p><p><a href=\"https://api.nhs.uk/conditions/allergies/\">Allergy tests</a> are not usually needed, although they're sometimes helpful in identifying whether a food allergy may be triggering symptoms.</p>",
+      "title": "Causes of atopic eczema"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "treatments_overview",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/#treatments-summary",
+      "description": "Treatments for atopic eczema include emollients (moisturising treatments) and steroid creams.",
+      "text": "",
+      "title": ""
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "other_treatments",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/#treatments-other",
+      "description": "Treatments for atopic eczema include emollients (moisturising treatments) and steroid creams.",
+      "text": "<p>Treatment for atopic eczema can help to relieve the symptoms and many cases improve over time.</p><p>But there's currently no cure and severe eczema often has a significant impact on daily life, which may be difficult to cope with physically and mentally.</p><p>There's also an increased risk of skin infections. </p><p>Many different treatments can be used to control symptoms and manage eczema, including:</p><ul><li>self-care techniques, such as reducing scratching and avoiding triggers</li><li><a href=\"https://api.nhs.uk/conditions/emollients/\">emollients</a> (moisturising treatments) – used on a daily basis for dry skin</li><li><a href=\"https://api.nhs.uk/conditions/steroids/\">topical corticosteroids</a> – used to reduce swelling, redness and itching during flare-ups</li></ul>",
+      "title": "Treating atopic eczema"
+    }
+  ],
+  "relatedLink": [
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/",
+      "linkRelationship": "Navigation",
+      "position": 0,
+      "name": "Atopic eczema",
+      "alternativeHeadline": "Overview"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/symptoms/",
+      "linkRelationship": "Navigation",
+      "position": 1,
+      "name": "Symptoms"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/causes/",
+      "linkRelationship": "Navigation",
+      "position": 2,
+      "name": "Causes"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/treatment/",
+      "linkRelationship": "Navigation",
+      "position": 3,
+      "name": "Treatment"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/conditions/atopic-eczema/complications/",
+      "linkRelationship": "Navigation",
+      "position": 4,
+      "name": "Complications"
+    }
+  ],
+  "keywords": [],
+  "mainEntityOfPage": [
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 0,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p><b>Atopic eczema (atopic dermatitis) is the most common form of eczema, a condition that causes the skin to become itchy, dry and cracked.</b></p><p>Atopic eczema is more common in children, often developing before their first birthday. But it may also develop for the first time in adults.</p><p>It&#x27;s usually a long-term (chronic) condition, although it can improve significantly, or even clear completely, in some children as they get older.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 1,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "@type": "WebPageElement",
+          "name": "Information",
+          "identifier": "3",
+          "text": "<h2>Coronavirus advice</h2><p><a href=\"https://eczema.org/blog/advice-on-coronavirus-covid-19-for-people-with-eczema/\">Get advice about coronavirus and eczema from the National Eczema Society</a></p>"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 2,
+      "@type": "WebPageElement",
+      "headline": "Symptoms of atopic eczema",
+      "text": "Symptoms of atopic eczema",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Atopic eczema causes the skin to become itchy, dry, cracked and sore.</p><p>Some people only have small patches of dry skin, but others may experience widespread inflamed skin all over the body.</p><p>Inflamed skin can become red on lighter skin, and darker brown, purple or grey on darker skin. This can also be more difficult to see on darker skin.</p><p>Although atopic eczema can affect any part of the body, it most often affects the hands, insides of the elbows, backs of the knees and the face and scalp in children.</p><p>People with atopic eczema usually have periods when symptoms are less noticeable, as well as periods when symptoms become more severe (flare-ups).</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 3,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "When to seek medical advice",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<h2>When to seek medical advice</h2><p>See a GP if you have symptoms of atopic eczema. They&#x27;ll usually be able to diagnose atopic eczema by looking at your skin and asking questions, such as:</p><ul><li>whether the rash is itchy and where it appears</li><li>when the symptoms first began</li><li>whether it comes and goes over time</li><li>whether there&#x27;s a history of atopic eczema in your family</li><li>whether you have any other conditions, such as <a href=\"https://api.nhs.uk/conditions/allergies/\">allergies</a> or <a href=\"https://api.nhs.uk/conditions/asthma/\">asthma</a></li><li>whether something in your diet or lifestyle may be contributing to your symptoms</li></ul><p>Typically, to be diagnosed with atopic eczema you should have had an itchy skin condition in the last 12 months and 3 or more of the following:</p><ul><li>visibly irritated red skin in the creases of your skin – such as the insides of your elbows or behind your knees (or on the cheeks, outsides of elbows, or fronts of the knees in children aged 18 months or under) at the time of examination by a health professional</li><li>a history of skin irritation occurring in the same areas mentioned above</li><li>generally dry skin in the last 12 months</li><li>a history of asthma or <a href=\"https://api.nhs.uk/conditions/hay-fever/\">hay fever</a> – children under 4 must have an immediate relative, such as a parent, brother or sister, who has 1 of these conditions</li><li>the condition started before the age of 2 (this does not apply to children under the age of 4)</li></ul>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 4,
+      "@type": "WebPageElement",
+      "headline": "Causes of atopic eczema",
+      "text": "Causes of atopic eczema",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>The exact cause of atopic eczema is unknown, but it&#x27;s clear it is not down to one single thing.</p><p>Atopic eczema often occurs in people who get <a href=\"https://api.nhs.uk/conditions/allergies/\">allergies</a>. &quot;Atopic&quot; means sensitivity to allergens.</p><p>It can run in families, and often develops alongside other conditions, such as <a href=\"https://api.nhs.uk/conditions/asthma/\">asthma</a> and <a href=\"https://api.nhs.uk/conditions/hay-fever/\">hay fever</a>.</p><p>The symptoms of atopic eczema often have certain triggers, such as soaps, detergents, stress and the weather. </p><p>Sometimes <a href=\"https://api.nhs.uk/conditions/food-allergy/\">food allergies</a> can play a part, especially in young children with severe eczema.</p><p>You may be asked to keep a food diary to try to determine whether a specific food makes your symptoms worse.</p><p><a href=\"https://api.nhs.uk/conditions/allergies/\">Allergy tests</a> are not usually needed, although they&#x27;re sometimes helpful in identifying whether a food allergy may be triggering symptoms.</p>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 5,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "",
+      "mainEntityOfPage": []
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 6,
+      "@type": "WebPageElement",
+      "headline": "Treating atopic eczema",
+      "text": "Treating atopic eczema",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<p>Treatment for atopic eczema can help to relieve the symptoms and many cases improve over time.</p><p>But there&#x27;s currently no cure and severe eczema often has a significant impact on daily life, which may be difficult to cope with physically and mentally.</p><p>There&#x27;s also an increased risk of skin infections. </p><p>Many different treatments can be used to control symptoms and manage eczema, including:</p><ul><li>self-care techniques, such as reducing scratching and avoiding triggers</li><li><a href=\"https://api.nhs.uk/conditions/emollients/\">emollients</a> (moisturising treatments) – used on a daily basis for dry skin</li><li><a href=\"https://api.nhs.uk/conditions/steroids/\">topical corticosteroids</a> – used to reduce swelling, redness and itching during flare-ups</li></ul>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    },
+    {
+      "identifier": "0",
+      "name": "section heading",
+      "position": 7,
+      "@type": "WebPageElement",
+      "headline": "",
+      "text": "Other types of eczema",
+      "mainEntityOfPage": [
+        {
+          "position": 0,
+          "identifier": "1",
+          "text": "<h2>Other types of eczema</h2><p>Eczema is the name for a group of skin conditions that cause dry, irritated skin.</p><p>Other types of eczema include:</p><ul><li><a href=\"https://api.nhs.uk/conditions/discoid-eczema/\">discoid eczema</a> – a type of eczema that occurs in circular or oval patches on the skin</li><li><a href=\"https://api.nhs.uk/conditions/contact-dermatitis/\">contact dermatitis</a> – a type of eczema that occurs when the body comes into contact with a particular substance</li><li><a href=\"https://api.nhs.uk/conditions/varicose-eczema/\">varicose eczema</a> – a type of eczema that most often affects the lower legs and is caused by problems with the flow of blood through the leg veins</li><li><a href=\"https://api.nhs.uk/conditions/dandruff/\">seborrhoeic eczema</a> – a type of eczema where red, scaly patches develop on the sides of the nose, eyebrows, ears and scalp</li><li><a href=\"https://api.nhs.uk/conditions/pompholyx/\">dyshidrotic eczema</a> (pompholyx) – a type of eczema that causes tiny blisters to erupt across the palms of the hands</li></ul>",
+          "@type": "WebPageElement",
+          "name": "markdown"
+        }
+      ]
+    }
+  ],
+  "alternativeHeadline": "Overview"
+}

@@ -1,0 +1,336 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SearchResultsPage",
+  "name": "Medicines A to Z",
+  "copyrightHolder": {
+    "name": "Crown Copyright",
+    "@type": "Organization"
+  },
+  "license": "https://developer.api.nhs.uk/terms",
+  "author": {
+    "url": "https://www.nhs.uk",
+    "logo": "https://www.nhs.uk/nhscwebservices/documents/logo1.jpg",
+    "email": "nhswebsite.servicedesk@nhs.net",
+    "@type": "Organization",
+    "name": "NHS website"
+  },
+  "about": {
+    "@type": "WebPage",
+    "name": "Medicines A to Z"
+  },
+  "description": "Find out how your medicine works, how and when to take it, possible side effects and answers to your common questions.",
+  "url": "https://api.nhs.uk/medicines/",
+  "breadcrumb": {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 0,
+        "item": {
+          "@id": "https://api.nhs.uk/medicines/",
+          "name": "Medicines A to Z",
+          "genre": "medicine"
+        }
+      }
+    ]
+  },
+  "significantLink": [
+    {
+      "@type": "LinkRole",
+      "name": "Azithromycin",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/azithromycin/",
+      "description": "NHS medicines information on azithromycin - what it’s used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-12-06T14:47:00+00:00",
+          "2021-12-06T11:32:00+00:00"
+        ],
+        "dateModified": "2020-12-31T15:21:01+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Atorvastatin",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/atorvastatin/",
+      "description": "NHS medicines information on atorvastatin - what it’s used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-12-19T00:00:00+00:00",
+          "2021-12-19T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-31T15:05:19+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Atenolol",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/atenolol/",
+      "description": "NHS medicines information on atenolol - what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-03-19T00:00:00+00:00",
+          "2022-03-19T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-31T14:15:36+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Amlodipine",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/amlodipine/",
+      "description": "NHS medicines information on amlodipine - what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-12-18T00:00:00+00:00",
+          "2021-12-18T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-31T12:23:42+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Alogliptin",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/alogliptin/",
+      "description": "NHS medicines information on alogliptin – what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-02-08T00:00:00+00:00",
+          "2022-02-08T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-31T12:21:41+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Alendronic acid",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/alendronic-acid/",
+      "description": "NHS medicines information on alendronic acid - what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-08-17T16:03:00+00:00",
+          "2021-08-17T16:03:00+00:00"
+        ],
+        "dateModified": "2020-12-31T12:20:31+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Acrivastine",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/acrivastine/",
+      "description": "NHS medicines information on acrivastine (Benadryl) - what it’s used for, side effects, dosage and who can take it",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-10-19T13:39:00+00:00",
+          "2021-10-19T13:39:00+00:00"
+        ],
+        "dateModified": "2020-12-31T12:19:20+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Amoxicillin",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/amoxicillin/",
+      "description": "NHS medicines information on amoxicillin – what it’s used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-11-23T00:00:00+00:00",
+          "2021-11-23T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-31T12:03:23+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Azathioprine",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/azathioprine/",
+      "description": "Azathioprine is an immunosuppressant used to treat conditions such as rheumatoid arthritis and Crohn's disease or after an organ transplant.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2020-02-26T00:00:00+00:00",
+          "2023-02-26T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-29T17:50:09+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Amitriptyline for depression",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/amitriptyline-for-depression/",
+      "description": "NHS medicines information on amitriptyline for depression - how it works, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-12-12T00:00:00+00:00",
+          "2021-12-12T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-22T13:05:32+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Allopurinol",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/allopurinol/",
+      "description": "NHS medicines information on allopurinol – what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-11-21T00:00:00+00:00",
+          "2022-11-21T00:00:00+00:00"
+        ],
+        "dateModified": "2020-12-22T11:47:18+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Adalimumab",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/adalimumab/",
+      "description": "NHS medicines information: Adalimumab (Humira) and its biosimilars known by brand names Amgevita, Imraldi, Hyrimoz and Hulio.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-02-18T09:19:00+00:00",
+          "2022-02-18T09:19:00+00:00"
+        ],
+        "dateModified": "2020-12-22T11:12:30+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Aciclovir (including Zovirax)",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/aciclovir/",
+      "description": "NHS medicines information on aciclovir – what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-07-08T13:16:00+00:00",
+          "2022-07-08T13:16:00+00:00"
+        ],
+        "dateModified": "2020-12-18T14:47:39+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Amitriptyline for pain and migraine",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/amitriptyline-for-pain/",
+      "description": "NHS medicines information on amitriptyline for pain - how it works, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2020-09-15T23:00:00+00:00",
+          "2023-09-15T23:00:00+00:00"
+        ],
+        "dateModified": "2020-10-30T12:03:26+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Aspirin for pain relief",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/aspirin-for-pain-relief/",
+      "description": "NHS medicines information on aspirin as a painkiller – what it’s used for, side effects, dosage and who can take it",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2018-11-15T14:31:00+00:00",
+          "2021-11-15T14:31:00+00:00"
+        ],
+        "dateModified": "2020-10-16T14:03:54+00:00",
+        "@type": "MedicalWebPage"
+      }
+    },
+    {
+      "@type": "LinkRole",
+      "name": "Apixaban",
+      "articleStatus": "published",
+      "linkRelationship": "Result",
+      "url": "https://api.nhs.uk/medicines/apixaban/",
+      "description": "NHS medicines information on apixaban - what it's used for, side effects, dosage and who can take it.",
+      "mainEntityOfPage": {
+        "genre": "medicine",
+        "lastReviewed": [
+          "2019-04-03T00:00:00+00:00",
+          "2022-04-03T00:00:00+00:00"
+        ],
+        "dateModified": "2020-10-13T15:37:00+00:00",
+        "@type": "MedicalWebPage"
+      }
+    }
+  ],
+  "relatedLink": [
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/medicines/?order=newest&page=1&category=A&orderBy=dateModified",
+      "name": "First Page",
+      "description": "Link to First Page",
+      "linkRelationship": "Pagination"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/medicines/?order=newest&page=1&category=A&orderBy=dateModified",
+      "name": "Last Page",
+      "description": "Link to Last Page",
+      "linkRelationship": "Pagination"
+    },
+    {
+      "@type": "LinkRole",
+      "url": "https://api.nhs.uk/medicines/?order=newest&page=1&category=A&orderBy=dateModified",
+      "name": "Self",
+      "description": "Link to nhs.uk Page",
+      "linkRelationship": "Self"
+    }
+  ],
+  "genre": "medicine"
+}
