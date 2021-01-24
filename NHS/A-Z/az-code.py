@@ -9,7 +9,7 @@ with open('../nhskey.txt', 'r') as file:
    key = file.read()
 
 url = f'https://api.nhs.uk/conditions/'
-payload = {'subscription-key':key, 'category':'a','synonyms':'true', 'childArticles':'true'}
+payload = {'subscription-key':key, 'category':'a', 'synonyms':'true'}
 
 def main():
 
@@ -18,9 +18,6 @@ def main():
     response = requests.get(url, params=payload)
     call_counter += 1
     json_data = response.json()
-
-    with open("check_json.txt", "w") as text_file:
-        text_file.write(response.text)
 
     main_data = pd.json_normalize(json_data['significantLink'])
 
@@ -38,6 +35,9 @@ def main():
 
         response = requests.get(url, params=payload)
         call_counter += 1
+
+        with open("test.txt", "w") as text_file:
+            text_file.write(response.text)
     
         json_data = response.json()
         current_data = pd.json_normalize(json_data['significantLink'])
