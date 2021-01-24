@@ -2,12 +2,14 @@ import requests
 import pandas as pd
 import json
 import time
+import string
+from pprint import pprint
 
-with open('azkey.txt', 'r') as file:
+with open('../nhskey.txt', 'r') as file:
    key = file.read()
 
 url = f'https://api.nhs.uk/conditions/'
-payload = {'subscription-key':key, 'page':1}
+payload = {'subscription-key':key, 'category':'a','synonyms':'true', 'childArticles':'true'}
 
 def main():
 
@@ -16,22 +18,31 @@ def main():
     response = requests.get(url, params=payload)
     call_counter += 1
     json_data = response.json()
+
+    with open("check_json.txt", "w") as text_file:
+        text_file.write(response.text)
+
     main_data = pd.json_normalize(json_data['significantLink'])
 
-    while response.status_code == 200:
+    for letter in string.ascii_lowercase:
+
+        if letter == 'a':
+            continue
+
+        print(call_counter)
 
         if (call_counter % 10 == 0):
             time.sleep(60)
 
-        payload['page'] = payload.get('page') + 1
-        print(payload['page'])
+        payload['category'] = letter
 
         response = requests.get(url, params=payload)
         call_counter += 1
+    
         json_data = response.json()
         current_data = pd.json_normalize(json_data['significantLink'])
 
-        main_data = main_data.append(current_data)
+        main_data = main_data.append(current_data, ignore_index = True)
 
     main_data.to_csv('nhs_az.csv')
 
