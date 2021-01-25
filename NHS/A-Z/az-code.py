@@ -130,4 +130,8 @@ def update(call_counter):
     
     print ('Update successful')
 
-mergeFiles()
+def convertToTxt():
+    with open('nhs_az.json', 'r') as f:
+        txt = json.load(f)
+    with open('nhs_az.txt', 'w') as f:
+        f.write(json.dumps(txt))
