@@ -41,7 +41,6 @@ def initialise(call_counter, key):
 
             current_url = entry['url']
             current_response = requests.get(current_url, params=current_payload)
-            current_json = json.loads(current_response.text)
             
             call_counter += 1
 
@@ -91,18 +90,21 @@ def checkCalls(call_counter):
 def updateLastChecked():
 
     today = date.today()
-    lastChecked = today.strftime("%d-%m-%Y")
+    lastChecked = today.strftime("%Y-%m-%d")
     
     with open('lastChecked.txt', 'w') as file:
         file.write(lastChecked)
 
 # Update our dataset with any new entries
 def update(call_counter):
+    
+    updated_entries = {}
 
     with open('nhs_az.json', 'r') as json_file:
-        all_entries = json.loads(all_entries, json_file)
+        all_entries = json.load(json_file)
     
     print(f'Last updated {lastChecked}')
+
     update_payload = {'subscription-key':key, 'startDate':lastChecked, 'orderBy':'dateModified'}
     update_response = requests.get(main_url, params=update_payload)
     call_counter += 1
@@ -116,11 +118,11 @@ def update(call_counter):
         current_url = entry['url']
         current_payload = {'subscription-key':key}
         current_response = requests.get(current_url, params=current_payload)
-        current_json = json.loads(current_response.text)
 
         call_counter += 1
 
         all_entries[entry['name']] = current_response.text
+        updated_entries[entry['name']] = current_response.text
         print('Updated successfully')
 
     updateLastChecked()
@@ -128,10 +130,14 @@ def update(call_counter):
     with open('nhs_az.json', 'w') as json_file:
         json.dump(all_entries, json_file)
     
-    print ('Update successful')
+    with open('nhs_az_updated_entries.json', 'w') as json_file:
+        json.dump(updated_entries, json_file)
+    
+    print ('All entries updated successfully')
 
 def convertToTxt():
     with open('nhs_az.json', 'r') as f:
         txt = json.load(f)
     with open('nhs_az.txt', 'w') as f:
         f.write(json.dumps(txt))
+update(call_counter)
