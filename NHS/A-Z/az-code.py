@@ -2,6 +2,7 @@ import requests
 import json
 import time
 import string
+import pandas as pd
 from datetime import date
 
 with open('../nhskey.txt', 'r') as file:
@@ -140,4 +141,3 @@ def convertToTxt():
         txt = json.load(f)
     with open('nhs_az.txt', 'w') as f:
         f.write(json.dumps(txt))
-update(call_counter)
