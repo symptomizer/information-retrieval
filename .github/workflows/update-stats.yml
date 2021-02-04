@@ -38,10 +38,13 @@ jobs:
       - name: JSON Payload 
         run: echo DOC_COUNT_JSON='{"count":${{env.NUM_OF_DOCS}}}' >> $GITHUB_ENV
       
-      - name: GCP Call Function
-        uses: actions-hub/gcloud@master
-        env:
-          PROJECT_ID: symptomizer
-          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-        with:
-          args: functions call update-document-nums --region=europe-west2 --data '${{ env.DOC_COUNT_JSON }}'
+      - name: POST updated count
+        run: curl --header "Content-Type:application/json" --request POST   --data '${{ env.DOC_COUNT_JSON }}'  https://europe-west2-symptomizer.cloudfunctions.net/update-doc-nums
+
+#       - name: GCP Call Function
+#         uses: actions-hub/gcloud@master
+#         env:
+#           PROJECT_ID: symptomizer
+#           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+#         with:
+#           args: functions call update-document-nums --region=europe-west2 --data '${{ env.DOC_COUNT_JSON }}'
