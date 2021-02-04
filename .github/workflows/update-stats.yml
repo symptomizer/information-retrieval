@@ -32,7 +32,7 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Calculate Number of Documents 
         run: |
-          python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))
+          python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))"
           echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))") >> $GITHUB_ENV
 
       - name: Test Print Payload 
@@ -44,4 +44,4 @@ jobs:
           PROJECT_ID: symptomizer
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
-          args: functions call update-document-nums --region=europe-west2 --data='{"count"::77}'
+          args: functions call update-document-nums --region=europe-west2 --data='{""count""::77}'
