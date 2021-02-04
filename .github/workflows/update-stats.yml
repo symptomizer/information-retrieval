@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  update:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,10 +30,10 @@ jobs:
           python-version: '3.x'
       
       # You can test your matrix by printing the current Python version
-      - name: Display Python version
-        run: echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f)))) >> $GITHUB_ENV
+      - name: Calculate Number of Documents
+        run: echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f)))") >> $GITHUB_ENV
 
-      - name: GCP Auth
+      - name: GCP Call Function
         uses: actions-hub/gcloud@master
         env:
           PROJECT_ID: symptomizer
