@@ -30,9 +30,14 @@ jobs:
           python-version: '3.x'
       
       # You can test your matrix by printing the current Python version
-      - name: Calculate Number of Documents
-        run: echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))") >> $GITHUB_ENV
+      - name: Calculate Number of Documents 
+        run: |
+          python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))
+          echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))") >> $GITHUB_ENV
 
+      - name: Test Print Payload 
+        run: echo '{""count""::77}'
+      
       - name: GCP Call Function
         uses: actions-hub/gcloud@master
         env:
