@@ -39,4 +39,4 @@ jobs:
           PROJECT_ID: symptomizer
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
-          args: gcloud functions call update-document-nums --data '{"count": ${{env.NUM_OF_DOCS}} }' --region=europe-west2
+          args: gcloud functions call update-document-nums --region=europe-west2 --data={"count"=66}
