@@ -36,7 +36,7 @@ jobs:
           echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f.read())))") >> $GITHUB_ENV
 
       - name: Test Print Payload 
-        run: echo '{""count""::77}'
+        run: echo DOC_COUNT_JSON='{"count":2}' >> $GITHUB_ENV
       
       - name: GCP Call Function
         uses: actions-hub/gcloud@master
@@ -44,4 +44,4 @@ jobs:
           PROJECT_ID: symptomizer
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
-          args: functions call update-document-nums --region=europe-west2 --data='{""count""::77}'
+          args: functions call update-document-nums --region=europe-west2 --data ${{ env.DOC_COUNT_JSON }}
