@@ -39,4 +39,4 @@ jobs:
           PROJECT_ID: symptomizer
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
-          args: functions call update-document-nums --region=europe-west2 --data={"count": 66}
+          args: functions call update-document-nums --region=europe-west2 --data='{"count"::77}'
