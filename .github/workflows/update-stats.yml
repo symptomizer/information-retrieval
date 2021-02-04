@@ -31,7 +31,7 @@ jobs:
       
       # You can test your matrix by printing the current Python version
       - name: Display Python version
-        run: python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f)))" >> $NUM_OF_DOCS
+        run: echo NUM_OF_DOCS=$(python -c "import json; f = open('NHS/A-Z/nhs_az.json'); print(len(json.loads(f)))) >> $GITHUB_ENV
 
       - name: GCP Auth
         uses: actions-hub/gcloud@master
@@ -39,4 +39,4 @@ jobs:
           PROJECT_ID: symptomizer
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
-          args: gcloud functions call update-document-nums --data '{"count":${{NUM_OF_DOCS}}}' --region=europe-west2
+          args: gcloud functions call update-document-nums --data '{"count": ${{env.NUM_OF_DOCS}} }' --region=europe-west2
