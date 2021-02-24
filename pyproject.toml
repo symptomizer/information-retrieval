@@ -8,6 +8,11 @@ authors = ["Ragnor Comerford <hello@ragnor.co>"]
 python = "^3.8"
 scikit-learn = "^0.24.1"
 strawberry-graphql = {extras = ["debug-server"], version = "^0.44.12"}
+pymongo = "^3.11.3"
+dnspython = "^2.1.0"
+faiss-cpu = "^1.7.0"
+cache_to_disk = "^0.0.9"
+sentence-transformers = "^0.4.1"
 [tool.poetry.dev-dependencies]
 
 [build-system]

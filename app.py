@@ -1,6 +1,16 @@
 import strawberry
 from typing import List
-from search import tfidf_search
+from search import *
+from build import *
+
+documents = get_data()
+bert_model = build_bert_model()
+text = documents['description']+documents['title']+documents['content'].apply(lambda arr: " ".join(arr))
+tfidf_model = build_tfidf_model(documents['description']+documents['title'])
+tfidf_faiss = load_faiss(tfidf_model, text, "tfidf")
+bert_faiss = load_faiss(bert_model, text, "bert")
+
+
 @strawberry.type
 class User:
     name: str
@@ -9,7 +19,7 @@ class User:
 @strawberry.type
 class Document:
     id: str
-    name: str
+    title: str
     description: str
 
 @strawberry.type
@@ -20,7 +30,12 @@ class SearchResult:
 class Query:
     @strawberry.field
     def search(self, q: str) -> SearchResult:
-        return SearchResult([Document(id="asd", name=doc[0],description=doc[1]) for doc in tfidf_search(q)])
+        D, I = vector_search(q, tfidf_model, tfidf_faiss)
+        return SearchResult([Document(id=doc['_id'], title=doc['title'],description=doc['description']) for _, doc in id2details(documents, I).iterrows()])
+    @strawberry.field
+    def semantic_search(self, q: str) -> SearchResult:
+        D, I = vector_search(q, bert_model, bert_faiss)
+        return SearchResult([Document(id=doc['_id'], title=doc['title'],description=doc['description']) for _, doc in id2details(documents, I).iterrows()])
 
 
 schema = strawberry.Schema(query=Query)
