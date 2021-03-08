@@ -1,18 +1,20 @@
 [tool.poetry]
-name = "information-retrieval"
+name = "ir3.7.0"
 version = "0.1.0"
 description = ""
 authors = ["Ragnor Comerford <hello@ragnor.co>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-scikit-learn = "^0.24.1"
+python = "3.7.0"
 strawberry-graphql = {extras = ["debug-server"], version = "^0.44.12"}
 pymongo = "^3.11.3"
 dnspython = "^2.1.0"
 faiss-cpu = "^1.7.0"
 cache_to_disk = "^0.0.9"
 sentence-transformers = "^0.4.1"
+pytorch_transformers = "^1.2.0"
+torch = "^1.8.0"
+
 [tool.poetry.dev-dependencies]
 
 [build-system]
