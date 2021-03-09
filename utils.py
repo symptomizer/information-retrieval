@@ -4,11 +4,20 @@ import collections
 import math
 
 import numpy as np
+import pandas as pd
 import torch
 from pytorch_transformers.tokenization_bert import (BasicTokenizer,
                                                     whitespace_tokenize)
 from torch.utils.data import DataLoader, SequentialSampler, TensorDataset
 
+
+docs2text = lambda documents: documents['description']+documents['title']+documents['content'].apply(lambda arr:  " ".join(filter(None,arr['text'])))
+
+def id2details(df, I, columns=None):
+    """Returns the paper titles based on the paper index."""
+    if columns is not None:
+        return df.iloc[I][columns]
+    return df.iloc[I]
 
 class SquadExample(object):
     """

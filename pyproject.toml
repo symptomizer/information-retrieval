@@ -14,6 +14,7 @@ cache_to_disk = "^0.0.9"
 sentence-transformers = "^0.4.1"
 pytorch_transformers = "^1.2.0"
 torch = "^1.8.0"
+pydantic = "^1.8.1"
 
 [tool.poetry.dev-dependencies]
 

@@ -65,7 +65,8 @@ def build_faiss(model, documents, name):
     # embeddings = np.array([embedding for embedding in embeddings]).astype("float32")
 
     # Step 2: Instantiate the index
-    index = faiss.IndexFlatL2(embeddings.shape[1])
+    faiss.normalize_L2(embeddings)
+    index = faiss.IndexFlatIP(embeddings.shape[1])
 
     # Step 3: Pass the index to IndexIDMap
     # index = faiss.IndexIDMap(index)
