@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: RafikFarhad/push-to-gcr-github-action@v3.0.2
         with:
-          gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          gcloud_service_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           registry: gcr.io
           project_id: symptomizer
           image_name: information-retrieval
