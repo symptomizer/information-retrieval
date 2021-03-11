@@ -1,52 +1,29 @@
-name: Build and Push to GCR
-
-on: [push]
-
-# Environment variables available to all jobs and steps in this workflow
-#  GKE_EMAIL: ${{ secrets.GKE_EMAIL }} 
-#  GKE_KEY: ${{ secrets.GKE_KEY }} 
-env:
-  GITHUB_SHA: ${{ github.sha }} 
-  GITHUB_REF: ${{ github.ref }} 
-  IMAGE: information-retrieval
-  REGISTRY_HOSTNAME: gcr.io
-
+name: Build
+on:
+  push:
+    branches:
+      - '**'
 
 jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, and Publish
+  build:
+    name: Build image
     runs-on: ubuntu-latest
+
+    env:
+      HASH: $(git rev-parse --short "$GITHUB_SHA")
+      BRANCH: ${GITHUB_REF##*/}
+      PROJECT_ID: ${{ secrets.PROJECT_ID }}
+
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
+        with:
+            project_id: ${{ secrets.PROJECT_ID }}
+            service_account_key: ${{ secrets.GCP_SA_KEY }}
+            export_default_credentials: true
 
-    # Setup gcloud CLI
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-      with:
-        version: '270.0.0'
-        service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }} 
-
-    # Configure docker to use the gcloud command-line tool as a credential helper
-    - run: |
-        # Set up docker to authenticate
-        # via gcloud command-line tool.
-        gcloud auth configure-docker
-
-    # Build the Docker image
-    - name: Build
-      run: |
-        export TAG=`echo $GITHUB_REF | awk -F/ '{print $NF}'`
-        echo $TAG
-        docker build -t "$REGISTRY_HOSTNAME"/"$IMAGE":"$TAG" \
-          --build-arg GITHUB_SHA="$GITHUB_SHA" \
-          --build-arg GITHUB_REF="$GITHUB_REF" .
-
-    # Push the Docker image to Google Container Registry
-    - name: Publish
-      run: |
-        export TAG=`echo $GITHUB_REF | awk -F/ '{print $NF}'`
-        echo $TAG
-        docker push "$REGISTRY_HOSTNAME"/"$IMAGE":"$TAG"
-        docker tag "$REGISTRY_HOSTNAME"/"$IMAGE":"$TAG" "$REGISTRY_HOSTNAME"/"$IMAGE":latest
-        docker push "$REGISTRY_HOSTNAME"/"$IMAGE":latest
+      - name: Use gcloud CLI
+        run: gcloud info
