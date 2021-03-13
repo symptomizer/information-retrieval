@@ -1,0 +1,13 @@
+pandas 
+torch 
+numpy 
+strawberry-graphql[debug-server] 
+nltk 
+scipy 
+scikit-learn 
+faiss-cpu 
+dnspython 
+cache_to_disk 
+pymongo 
+sentence-transformers 
+pytorch_transformers
