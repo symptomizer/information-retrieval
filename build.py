@@ -6,7 +6,7 @@ import pymongo
 import faiss
 import pandas as pd
 import numpy as np
-# nltk.download('stopwords')
+nltk.download('stopwords')
 import re
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
