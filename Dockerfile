@@ -1,7 +1,7 @@
 FROM python:3.8
 
-RUN pip install -r requirements.txt
-RUN python install_ci.py
+COPY requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
 
 WORKDIR /code
 COPY . /code
