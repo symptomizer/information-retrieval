@@ -5,7 +5,11 @@ from nltk.stem.snowball import EnglishStemmer  # Assuming we're working with Eng
 import pymongo
 import faiss
 import pandas as pd
+import dask.dataframe as dd
+from dask import delayed, compute
 import numpy as np
+from pympler import tracker
+from pympler.asizeof import asizeof
 # nltk.download('stopwords')
 import re
 import json
@@ -13,12 +17,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from cache_to_disk import cache_to_disk
 from cache_to_disk import delete_disk_caches_for_function
 from sentence_transformers import SentenceTransformer
-
+from joblib import dump, load
 import collections
 import logging
 import math
 
-import numpy as np
 import torch
 from pytorch_transformers import (WEIGHTS_NAME, BertConfig,
                                   BertForQuestionAnswering, BertTokenizer)
@@ -32,56 +35,108 @@ RawResult = collections.namedtuple("RawResult",
 
 from os import path
 # delete_disk_caches_for_function('get_data')
+collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
+all_docs = lambda: collection.find({}, projection={'title': True, 'description': True, "content.text": True})
+doc_generator = lambda q=all_docs: ((x['title'] or "") + " " + x.get('description',"")+ " " + " ".join(filter(None,x['content']['text'] or [])) for x in collection.find({}, projection={'title': True, 'description': True, "content.text": True}))
+# @cache_to_disk(2)
+# def get_data():
+#     print("Loading documents from databases ...")
+#     # get the database
+#     # meta = pd.DataFrame(list(collection.find({},{ '_id': False }).limit(1)))
+#     # queries = iterate_by_chunks(collection,chunksize=2)
+ 
+#     # for q in queries:
+#     #     print(list(q))
+#     #     # l = apply_q(q)
+#     #     # print(l)
+#     #     # df = dd.from_pandas(l,chunksize=2)
+#     #     print("dione df")
+#     for coll 
+#         # dd.to_parquet(df,"models/documents")
+    
+#     # dd.to_parquet(df,"models/documents",overwrite=True)
+    
+#     # return pd.DataFrame(list(database.get_collection("document").find())).fillna('')
 
 
-@cache_to_disk(2)
-def get_data():
-    print("Loading documents from database ...")
-    client = pymongo.MongoClient('mongodb+srv://ir:UE5Ki3Cr1eyWVeNl@cluster1.xo9vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-    # get the database
-    database = client['document']
-    return pd.DataFrame(list(database.get_collection("document").find())).fillna('')
 
-def build_tfidf_model(documents):
+def iterate_by_chunks(collection, chunksize=2, start_from=0, query={}, projection={ '_id': False }):
+   chunks = range(start_from, collection.find(query,projection).count(), int(chunksize))
+   num_chunks = 3 #len(chunks)
+   for i in range(1,num_chunks+1):
+        print("Loaded chunk ",i)
+        if i < num_chunks:
+            yield collection.find(query,projection)[chunks[i-1]:chunks[i]]
+        else:
+            yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
+
+def build_tfidf_model(num_docs=5):
     print("Building TF-IDF model...")
     model = TfidfVectorizer(ngram_range=(3,5), analyzer="char")
-    model.fit_transform(documents.values.astype('U'))
-    print("Completed TF-IDF model.")
+    model.fit((x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))) for x in collection.find({}, projection={'title': True, 'description': True, "content.text": True}).limit(num_docs)))
+    dump(model, 'models/tfidf_model.joblib') 
+    print("Saved TF-IDF model to models/tfidf_model.joblib.")
     return model
 
-def build_bert_model(documents=None):
+def load_tfidf_model():
+    if path.exists(f"models/tfidf_model.joblib"):
+        print("Loading TF-IDF model...")
+        return load("models/tfidf_model.joblib")
+    else:
+        return build_tfidf_model()
+    
+def load_bert_model():
     print("Building BERT model...")
     model = SentenceTransformer('msmarco-distilbert-base-v2')
     print("Completed BERT model.")
     return model
 
-def build_faiss(model, documents, name):
+def build_faiss(model, name):
+    tr = tracker.SummaryTracker()
     print(f"Building {name} index ...")
+    c = 2000 #collection.find({}, projection={'title': True, 'description': True, "content.text": True}).count()
+    encoder = None
+    index =  None
     if hasattr(model, 'encode'):
-        embeddings = model.encode(documents).astype("float32")
+        encoder =  lambda x: model.encode(x).astype("float32")
     else:
-        embeddings = model.transform(documents).toarray().astype("float32")
-
+        encoder = lambda x:model.transform(x).toarray().astype("float32")
+    i = 0
+    docs = []
+    ids = []
+    while i < c:
+        print(i)
+        for x in collection.find({}, projection={'_id': True, 'title': True, 'description': True, "content.text": True}).skip(i).limit(500):
+            docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
+            ids.append(x['_id'])
+        embeddings = encoder(docs)
+        if i == 0:
+            index = faiss.IndexFlatIP(embeddings.shape[1])
+        i += len(embeddings)
+        
+    
     # embeddings = np.array([embedding for embedding in embeddings]).astype("float32")
 
     # Step 2: Instantiate the index
-    faiss.normalize_L2(embeddings)
-    index = faiss.IndexFlatIP(embeddings.shape[1])
+        faiss.normalize_L2(embeddings)
+        print(tr.print_diff())
 
     # Step 3: Pass the index to IndexIDMap
     # index = faiss.IndexIDMap(index)
     # Step 4: Add vectors and their IDs
-    index.add(embeddings)
+        index.add_with_ids(embeddings,list(range(i,len(embeddings))))
     faiss.write_index(index,f"models/{name}.index")
+    dump(ids,'models/ids.joblib')
     print(f"Completed {name} index.")
     return index
     
 
-def load_faiss(model, documents, name):
+def load_faiss(model, name):
     if path.exists(f"models/{name}.index"):
         return faiss.read_index(f"models/{name}.index")
     else:
-        return build_faiss(model, documents, name)
+        return build_faiss(model, name)
+
         
 
 class QA:

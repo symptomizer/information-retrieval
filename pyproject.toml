@@ -15,6 +15,9 @@ sentence-transformers = "^0.4.1"
 pytorch_transformers = "^1.2.0"
 torch = "^1.8.0"
 pydantic = "^1.8.1"
+dask = {extras = ["dataframe"], version = "^2021.3.0"}
+blaze = "^0.10.1"
+pympler = "^0.9"
 
 [tool.poetry.dev-dependencies]
 
