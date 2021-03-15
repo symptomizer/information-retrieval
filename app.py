@@ -10,10 +10,11 @@ from utils import docs2text, id2details
 
 # bert_model = build_bert_model()
 # text = docs2text(documents)
+bert_model = load_bert_model()
 tfidf_model = load_tfidf_model()
-tfidf_faiss = load_faiss(tfidf_model, "tfidf")
+tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
 ids = load('models/ids.joblib')
-# bert_faiss = load_faiss(bert_model, text, "bert")
+
 # qa_model = QA('models')
 
 @strawberry.type
@@ -44,8 +45,8 @@ class Query:
     @strawberry.field
     def search(self, q: str) -> SearchResult:
         D1, I1 = vector_search(q, tfidf_model, tfidf_faiss)
-        # D2, I2 = vector_search(q, bert_model, bert_faiss)
-        D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
+        D2, I2 = vector_search(q, bert_model, bert_faiss)
+        # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
 
         I = list(set([x[1] for x in sorted((list(zip(D1[0],I1[0])) + list(zip(D2[0],I2[0]))), key = lambda x:x[0])]))
         print(I)

@@ -36,8 +36,37 @@ RawResult = collections.namedtuple("RawResult",
 from os import path
 # delete_disk_caches_for_function('get_data')
 collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
-all_docs = lambda: collection.find({}, projection={'title': True, 'description': True, "content.text": True})
-doc_generator = lambda q=all_docs: ((x['title'] or "") + " " + x.get('description',"")+ " " + " ".join(filter(None,x['content']['text'] or [])) for x in collection.find({}, projection={'title': True, 'description': True, "content.text": True}))
+mongo_query = lambda i,batch_size: [
+    {
+        '$project': {
+            'content': {
+                '$reduce': {
+                    'input': '$content.text', 
+                    'initialValue': '', 
+                    'in': {
+                        '$concat': [
+                            '$$value', ' ', '$$this'
+                        ]
+                    }
+                }
+            }, 
+            'title': 1, 
+            'description': 1
+        }
+    }, {
+        '$project': {
+            'text': {
+                '$concat': [
+                    '$title', ' ', '$description', ' ', '$content'
+                ]
+            }
+        }
+    },
+    { "$limit":  i+batch_size },
+    { "$skip": i }
+]
+# all_docs = lambda: collection.find({}, projection={'title': True, 'description': True, "content.text": True})
+# doc_generator = lambda q=all_docs: ((x['title'] or "") + " " + x.get('description',"")+ " " + " ".join(filter(None,x['content']['text'] or [])) for x in collection.find({}, projection={'title': True, 'description': True, "content.text": True}))
 # @cache_to_disk(2)
 # def get_data():
 #     print("Loading documents from databases ...")
@@ -60,20 +89,20 @@ doc_generator = lambda q=all_docs: ((x['title'] or "") + " " + x.get('descriptio
 
 
 
-def iterate_by_chunks(collection, chunksize=2, start_from=0, query={}, projection={ '_id': False }):
-   chunks = range(start_from, collection.find(query,projection).count(), int(chunksize))
-   num_chunks = 3 #len(chunks)
-   for i in range(1,num_chunks+1):
-        print("Loaded chunk ",i)
-        if i < num_chunks:
-            yield collection.find(query,projection)[chunks[i-1]:chunks[i]]
-        else:
-            yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
+# def iterate_by_chunks(collection, chunksize=2, start_from=0, query={}, projection={ '_id': False }):
+#    chunks = range(start_from, collection.find(query,projection).count(), int(chunksize))
+#    num_chunks = 3 #len(chunks)
+#    for i in range(1,num_chunks+1):
+#         print("Loaded chunk ",i)
+#         if i < num_chunks:
+#             yield collection.find(query,projection)[chunks[i-1]:chunks[i]]
+#         else:
+#             yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
 
-def build_tfidf_model(num_docs=5):
+def build_tfidf_model(num_docs=1000):
     print("Building TF-IDF model...")
     model = TfidfVectorizer(ngram_range=(3,5), analyzer="char")
-    model.fit((x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))) for x in collection.find({}, projection={'title': True, 'description': True, "content.text": True}).limit(num_docs)))
+    model.fit((x['text'] or "" for x in collection.aggregate(mongo_query(0,num_docs))))
     dump(model, 'models/tfidf_model.joblib') 
     print("Saved TF-IDF model to models/tfidf_model.joblib.")
     return model
@@ -91,57 +120,62 @@ def load_bert_model():
     print("Completed BERT model.")
     return model
 
-def build_faiss(model, name):
+def build_faiss(tfidf_model, bert_model):
     tr = tracker.SummaryTracker()
-    print(f"Building {name} index ...")
-    c = 2000 #collection.find({}, projection={'title': True, 'description': True, "content.text": True}).count()
+    print(f"Building indices ...")
+    c = collection.find().count()
+    batch_size = 500
     encoder = None
-    index =  None
-    # idmap = None
-    if hasattr(model, 'encode'):
-        encoder =  lambda x: model.encode(x).astype("float32")
-    else:
-        encoder = lambda x:model.transform(x).toarray().astype("float32")
+    bert_index =  None
+    tfidf_index = None
+    # if hasattr(model, 'encode'):
+    #     encoder =  lambda x: model.encode(x).astype("float32")
+    # else:
+    #     encoder = lambda x:model.transform(x).toarray().astype("float32")
     i = 0
     ids = []
     while i < c:
         print(i)
         docs = []
-        for x in collection.find({}, projection={'_id': True, 'title': True, 'description': True, "content.text": True}).skip(i).limit(500):
-            docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
+        for x in collection.aggregate(mongo_query(i,batch_size)) :
+            # docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
+            docs.append(x['text'] or "")
             ids.append(x['_id'])
-        print('docs',len(docs))
-        embeddings = encoder(docs)
+        print("Downloaded batch",i)
+        tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
+        print("Computed tfidf embeddings")
+        bert_embeddings = bert_model.encode([doc[:100] for doc  in docs]).astype("float32")
+        print("Computed bert embeddings")
         if i == 0:
-            index = faiss.IndexFlatIP(embeddings.shape[1])
-            # idmap = faiss.IndexIDMap(index)
-        
-    
-    # embeddings = np.array([embedding for embedding in embeddings]).astype("float32")
+            bert_index = faiss.IndexFlatIP(bert_embeddings.shape[1])
+            tfidf_index = faiss.IndexFlatIP(tfidf_embeddings.shape[1])
+            
 
-    # Step 2: Instantiate the index
-        faiss.normalize_L2(embeddings)
+        faiss.normalize_L2(bert_embeddings)
+        faiss.normalize_L2(tfidf_embeddings)
         print(tr.print_diff())
 
     # Step 3: Pass the index to IndexIDMap
     # index = faiss.IndexIDMap(index)
     # Step 4: Add vectors and their IDs
-        print("range",len(np.arange(i,i+len(embeddings))))
-        print("embeds",len(embeddings))
+        # print("range",len(np.arange(i,i+len(embeddings))))
+        # print("embeds",len(embeddings))
         # idmap.add_with_ids(embeddings,np.arange(i,i+len(embeddings)))
-        index.add(embeddings)
-        i += len(embeddings)
-    faiss.write_index(index,f"models/{name}.index")
-    dump(ids,'models/ids.joblib')
-    print(f"Completed {name} index.")
-    return index
-    
 
-def load_faiss(model, name):
-    if path.exists(f"models/{name}.index"):
-        return faiss.read_index(f"models/{name}.index")
+        bert_index.add(bert_embeddings)
+        tfidf_index.add(tfidf_embeddings)
+        i += len(tfidf_embeddings)
+    faiss.write_index(bert_index,f"models/bert.index")
+    faiss.write_index(tfidf_index,f"models/tfidf.index")
+    dump(ids,'models/ids.joblib')
+    print(f"Completed indices.")
+    return index
+
+def load_faiss(tfidf_model, bert_model):
+    if path.exists(f"models/bert.index") and path.exists(f"models/tfidf.index"):
+        return [faiss.read_index(f"models/tfidf.index"),faiss.read_index(f"models/bert.index")]
     else:
-        return build_faiss(model, name)
+        return build_faiss(tfidf_model, bert_model)
 
         
 
