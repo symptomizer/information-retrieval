@@ -29,5 +29,38 @@ collection = pymongo.MongoClient('mongodb+srv://ir:UE5Ki3Cr1eyWVeNl@cluster1.xo9
 # #         f.write("%s\n" % item.encode('latin1').decode('utf-8'))
 # model = load_tfidf_model()
 # build_faiss(model, "tfidf")
-ids = load('models/ids.joblib')
-print(ids)
+# Requires the PyMongo package.
+# https://api.mongodb.com/python/current
+
+# client = MongoClient('mongodb+srv://ir:UE5Ki3Cr1eyWVeNl@cluster1.xo9vl.mongodb.net/test?authSource=admin&replicaSet=atlas-5jw1an-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
+result = collection.aggregate([
+    {
+        '$project': {
+            'content': {
+                '$reduce': {
+                    'input': '$content.text', 
+                    'initialValue': '', 
+                    'in': {
+                        '$concat': [
+                            '$$value', ' ', '$$this'
+                        ]
+                    }
+                }
+            }, 
+            'title': 1, 
+            'description': 1
+        }
+    }, {
+        '$project': {
+            'text': {
+                '$concat': [
+                    '$title', ' ', '$description', ' ', '$content'
+                ]
+            }
+        }
+    },
+    { "$limit":  1 },
+    { "$skip": 0 }
+])  
+# ids = load('models/ids.joblib')
+print(list(result))

@@ -97,22 +97,24 @@ def build_faiss(model, name):
     c = 2000 #collection.find({}, projection={'title': True, 'description': True, "content.text": True}).count()
     encoder = None
     index =  None
+    # idmap = None
     if hasattr(model, 'encode'):
         encoder =  lambda x: model.encode(x).astype("float32")
     else:
         encoder = lambda x:model.transform(x).toarray().astype("float32")
     i = 0
-    docs = []
     ids = []
     while i < c:
         print(i)
+        docs = []
         for x in collection.find({}, projection={'_id': True, 'title': True, 'description': True, "content.text": True}).skip(i).limit(500):
             docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
             ids.append(x['_id'])
+        print('docs',len(docs))
         embeddings = encoder(docs)
         if i == 0:
             index = faiss.IndexFlatIP(embeddings.shape[1])
-        i += len(embeddings)
+            # idmap = faiss.IndexIDMap(index)
         
     
     # embeddings = np.array([embedding for embedding in embeddings]).astype("float32")
@@ -124,7 +126,11 @@ def build_faiss(model, name):
     # Step 3: Pass the index to IndexIDMap
     # index = faiss.IndexIDMap(index)
     # Step 4: Add vectors and their IDs
-        index.add_with_ids(embeddings,list(range(i,len(embeddings))))
+        print("range",len(np.arange(i,i+len(embeddings))))
+        print("embeds",len(embeddings))
+        # idmap.add_with_ids(embeddings,np.arange(i,i+len(embeddings)))
+        index.add(embeddings)
+        i += len(embeddings)
     faiss.write_index(index,f"models/{name}.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed {name} index.")
