@@ -99,9 +99,9 @@ mongo_query = lambda i,batch_size: [
 #         else:
 #             yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
 
-def build_tfidf_model(num_docs=1000):
+def build_tfidf_model(num_docs=2000, max_features=1500):
     print("Building TF-IDF model...")
-    model = TfidfVectorizer(ngram_range=(3,5), analyzer="char")
+    model = TfidfVectorizer(ngram_range=(3,5), max_features=max_features, analyzer="char")
     model.fit((x['text'] or "" for x in collection.aggregate(mongo_query(0,num_docs))))
     dump(model, 'models/tfidf_model.joblib') 
     print("Saved TF-IDF model to models/tfidf_model.joblib.")
@@ -150,7 +150,8 @@ def build_faiss(tfidf_model, bert_model):
             bert_index = faiss.IndexFlatIP(bert_embeddings.shape[1])
             tfidf_index = faiss.IndexFlatIP(tfidf_embeddings.shape[1])
             
-
+        # print(bert_embeddings.shape[1])
+        # print(tfidf_embeddings.shape[1])
         faiss.normalize_L2(bert_embeddings)
         faiss.normalize_L2(tfidf_embeddings)
         print(tr.print_diff())
@@ -169,7 +170,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    return tfidf_index, bert_index
+    return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):
     if path.exists(f"models/bert.index") and path.exists(f"models/tfidf.index"):
