@@ -169,7 +169,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    return index
+    return tfidf_index, bert_index
 
 def load_faiss(tfidf_model, bert_model):
     if path.exists(f"models/bert.index") and path.exists(f"models/tfidf.index"):
