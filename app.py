@@ -30,6 +30,7 @@ class Document:
     content: List[str]
     url: str
     source: str
+    language: str
 
 @strawberry.type
 class SearchResult:
@@ -43,7 +44,7 @@ class QAResult:
 @strawberry.type
 class Query:
     @strawberry.field
-    def search(self, q: str) -> SearchResult:
+    def search(self, q: str, language: str = 'en') -> SearchResult:
         D1, I1 = vector_search(q, tfidf_model, tfidf_faiss)
         D2, I2 = vector_search(q, bert_model, bert_faiss)
         # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
@@ -51,8 +52,8 @@ class Query:
         I = list(set([x[1] for x in sorted((list(zip(D1[0],I1[0])) + list(zip(D2[0],I2[0]))), key = lambda x:x[0])]))
         print(I)
         print(len(ids))
-        documents = collection.find({'_id': {'$in': (np.array(ids)[I[:10]]).tolist()}})
-        return SearchResult([Document(id=doc['_id'], title=doc['title'],description=doc['description'], content=doc['content']['text'], url=doc['directURL'], source=doc['source']['id']) for doc in documents])
+        documents = collection.find({'_id': {'$in': (np.array(ids)[I[:10]]).tolist()}, 'language': language})
+        return SearchResult([Document(id=doc['_id'], title=doc['title'].encode('latin1').decode('utf8'),description=doc['description'], content=doc['content']['text'], url=doc['directURL'], source=doc['source']['id'], language=doc['language']) for doc in documents])
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
