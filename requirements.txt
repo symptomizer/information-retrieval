@@ -11,5 +11,5 @@ cache_to_disk
 pymongo 
 sentence-transformers 
 pytorch_transformers
-dask
-pympler
+dask[complete]
+Pympler
