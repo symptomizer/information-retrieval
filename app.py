@@ -14,8 +14,7 @@ bert_model = load_bert_model()
 tfidf_model = load_tfidf_model()
 tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
 ids = load('models/ids.joblib')
-
-# qa_model = QA('models')
+qa_model = QA('models')
 
 @strawberry.type
 class User:
@@ -50,8 +49,7 @@ class Query:
         # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
 
         I = list(set([x[1] for x in sorted((list(zip(D1[0],I1[0])) + list(zip(D2[0],I2[0]))), key = lambda x:x[0])]))
-        print(I)
-        print(len(ids))
+
         documents = collection.find({'_id': {'$in': (np.array(ids)[I[:10]]).tolist()}, 'language': language})
         return SearchResult([Document(id=doc['_id'], title=doc['title'].encode('latin1').decode('utf8'),description=doc['description'], content=doc['content']['text'], url=doc['directURL'], source=doc['source']['id'], language=doc['language']) for doc in documents])
     # @strawberry.field
@@ -59,15 +57,11 @@ class Query:
     #     D, I = vector_search(q, bert_model, bert_faiss)
     #     return SearchResult([Document(id=doc['_id'], title=doc['title'],description=doc['description']) for _, doc in id2details(documents, I).iterrows()])
 
-    # @strawberry.field
-    # def qa(self, q: str) -> QAResult:
-    #     D, I = vector_search(q, tfidf_model, tfidf_faiss)
-    #     # reference = ""
-    #     # for _, doc in docs2text(id2details(documents, I[0])).iterrows():
-    #     #     print(doc)
-    #     #     reference += " " + doc
-    #     # print(docs2text(id2details(documents, I[0])))
-    #     answer = qa_model.predict(" ".join(documents['description'].iloc[I[0][0:2]]),q)
-    #     return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
+    @strawberry.field
+    def qa(self, q: str) -> QAResult:
+        D, I = vector_search(q, bert_model, bert_faiss)
+        reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
+        answer = qa_model.predict(" ".join(reference),q)
+        return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
 
 schema = strawberry.Schema(query=Query)
