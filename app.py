@@ -1,5 +1,5 @@
 import strawberry
-from typing import List
+from typing import List, Dict, Any
 from search import *
 from build import *
 from utils import docs2text, id2details
@@ -21,15 +21,20 @@ class User:
     name: str
     age: int
 
+
 @strawberry.type
 class Document:
     id: str
     title: str
     description: str
     content: List[str]
+    rights: str
     url: str
-    source: str
     language: str
+    type: str
+    directURL: str
+    datePublished: str
+    dateAdded: str
 
 @strawberry.type
 class SearchResult:
@@ -43,15 +48,17 @@ class QAResult:
 @strawberry.type
 class Query:
     @strawberry.field
-    def search(self, q: str, language: str = 'en') -> SearchResult:
+    def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
         D1, I1 = vector_search(q, tfidf_model, tfidf_faiss)
         D2, I2 = vector_search(q, bert_model, bert_faiss)
         # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
 
-        I = list(set([x[1] for x in sorted((list(zip(D1[0],I1[0])) + list(zip(D2[0],I2[0]))), key = lambda x:x[0])]))
-
-        documents = collection.find({'_id': {'$in': (np.array(ids)[I[:10]]).tolist()}, 'language': language})
-        return SearchResult([Document(id=doc['_id'], title=doc['title'].encode('latin1').decode('utf8'),description=doc['description'], content=doc['content']['text'], url=doc['directURL'], source=doc['source']['id'], language=doc['language']) for doc in documents])
+        I = list(set([x[1] for x in sorted((list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])]))
+        filters = {'language':language, '_id': {'$in': (np.array(ids)[I[:10]]).tolist()}}
+        if not type is None:
+            filters['type'] = type
+        documents = collection.find( filters)
+        return SearchResult([Document(id=doc['_id'], title=doc['title'].encode('latin1').decode('utf8'),description=doc['description'], content=doc['content']['text'], url=doc['url'],directURL=doc['directURL'], type=doc['type'], language=doc['language'], rights=doc['rights'], datePublished=doc['datePublished'], dateAdded=doc['dateIndexed']) for doc in documents])
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
