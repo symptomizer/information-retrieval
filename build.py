@@ -134,7 +134,7 @@ def upload_faiss():
 def build_faiss(tfidf_model, bert_model):
     tr = tracker.SummaryTracker()
     print(f"Building indices ...")
-    c = 2000
+    c = collection.find().count()
     batch_size = 500
     encoder = None
     bert_index =  None
