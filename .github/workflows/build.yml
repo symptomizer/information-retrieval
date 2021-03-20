@@ -60,6 +60,6 @@ jobs:
               export_default_credentials: true
 
         - name: Deploy
-          run: gcloud compute ssh --zone europe-west2-c information-retrieval-vm --command 'sudo usermod -aG docker $USER && newgrp docker && echo ${{ secrets.GCP_SA_KEY }} | docker login -u _json_key --password-stdin https://eu.gcr.io && docker stop $(docker ps -a -q) && docker pull eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA && docker run -d -P eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA'
+          run: gcloud compute ssh --quiet --zone europe-west2-c information-retrieval-vm --command 'sudo usermod -aG docker $USER && newgrp docker && echo ${{ secrets.GCP_SA_KEY }} | docker login -u _json_key --password-stdin https://eu.gcr.io && docker stop $(docker ps -a -q) && docker pull eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA && docker run -d -P eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA'
 
 
