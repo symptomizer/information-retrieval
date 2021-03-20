@@ -1,10 +1,22 @@
 from google.cloud import storage
 import os.path
 import os
+import json
+
+def fix_json():
+    with open('keyfile.json') as json_file:
+        data = json.load(json_file, strict=False)
+    with open("keyfile.json", "w") as outfile: 
+        json.dump(data, outfile) 
+
 
 def test_file_exists():
     print("Key File Exists")
     print(os.path.isfile("keyfile.json"))
+    
+    f = open("keyfile.json", "r")
+    print(f.read())
+    fix_json()
 
 def check_if_exists(bucket_name, file_name):
     storage_client = storage.Client.from_service_account_json('keyfile.json')
@@ -64,3 +76,5 @@ def pull_indices():
         download_blob("symptomizer_indices_bucket-1", "tfidf.index", "models/tfidf.index")
         download_blob("symptomizer_indices_bucket-1", "bert.index", "models/bert.index")
         download_blob("symptomizer_indices_bucket-1", "ids.joblib", "models/ids.joblib")
+    else:
+        print("No PULL_INDS env found. Rebuilding indices")
