@@ -13,6 +13,7 @@ jobs:
       BRANCH: ${GITHUB_REF##*/}
       SERVICE_NAME: information-retrieval
       PROJECT_ID: ${{ secrets.PROJECT_ID }}
+      BUCKET_KEY: ${{ secrets.GCP_BUCKET_KEY }}
 
     steps:
       - name: Checkout
@@ -31,7 +32,7 @@ jobs:
       # Build docker image
       - name: Image
         run: |-
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA .
+          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA --build-arg key_file="$BUCKET_KEY" .
           
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: |
