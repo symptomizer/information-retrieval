@@ -11,6 +11,8 @@
 # Icon must end with two \r
 Icon
 
+# Keys
+keyfile.json
 
 # Thumbnails
 ._*

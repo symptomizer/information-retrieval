@@ -10,7 +10,6 @@ from pytorch_transformers.tokenization_bert import (BasicTokenizer,
                                                     whitespace_tokenize)
 from torch.utils.data import DataLoader, SequentialSampler, TensorDataset
 
-
 docs2text = lambda documents: documents['description']+documents['title']+documents['content'].apply(lambda arr:  " ".join(filter(None,arr['text'])))
 
 def id2details(df, I, columns=None):

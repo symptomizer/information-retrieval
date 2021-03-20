@@ -34,6 +34,10 @@ RawResult = collections.namedtuple("RawResult",
                                    ["unique_id", "start_logits", "end_logits"])
 
 from os import path
+import os 
+
+from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices
+
 # delete_disk_caches_for_function('get_data')
 collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
 mongo_query = lambda i,batch_size: [
@@ -99,6 +103,7 @@ mongo_query = lambda i,batch_size: [
 #         else:
 #             yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
 
+
 def build_tfidf_model(num_docs=2000, max_features=1500):
     print("Building TF-IDF model...")
     model = TfidfVectorizer(ngram_range=(3,5), max_features=max_features, analyzer="char")
@@ -120,6 +125,12 @@ def load_bert_model():
     print("Completed BERT model.")
     return model
 
+def upload_faiss():
+    upload_blob("symptomizer_indices_bucket-1", "models/bert.index", "bert.index")
+    upload_blob("symptomizer_indices_bucket-1", "models/tfidf.index", "tfidf.index")
+    upload_blob("symptomizer_indices_bucket-1", "models/ids.joblib", "ids.joblib")
+    print("Completed Uploading indices to bucket")
+    
 def build_faiss(tfidf_model, bert_model):
     tr = tracker.SummaryTracker()
     print(f"Building indices ...")
@@ -170,6 +181,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
+    upload_faiss()  
     return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):
