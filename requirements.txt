@@ -14,3 +14,4 @@ pytorch_transformers
 dask[complete]
 Pympler
 google-cloud-storage
+wget

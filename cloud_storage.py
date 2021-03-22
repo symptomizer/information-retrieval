@@ -2,6 +2,16 @@ from google.cloud import storage
 import os.path
 import os
 import json
+import wget
+
+def download_pytorch_model():
+    if(not os.path.exists("models/pytorch_model.bin")):
+        print("Pytorch QA model not detected. Downloading...")
+        url = 'https://storage.googleapis.com/symptomizer_model_bucket/pytorch_model.bin'
+        wget.download(url, 'models/pytorch_model.bin')
+        print("Download Complete.")
+    else:
+        print("Pytorch model exists. Skipping download.")
 
 def fix_json():
     with open('keyfile.json') as json_file:
@@ -11,11 +21,7 @@ def fix_json():
 
 
 def test_file_exists():
-    print("Key File Exists")
-    print(os.path.isfile("keyfile.json"))
-    
     f = open("keyfile.json", "r")
-    print(f.read())
     fix_json()
 
 def check_if_exists(bucket_name, file_name):
@@ -42,7 +48,7 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
         )
     )
 
-# upload_blob("symptomizer_indices_bucket-1", "hello.txt", "hello.txt")
+# upload_blob("symptomizer_model_bucket", "models/pytorch_model.bin", "pytorch_model.bin")
 # print(check_if_exists("symptomizer_indices_bucket-1", "hello.txt"))
 # download_blob("symptomizer_indices_bucket-1", "hello.txt", "downloaded.txt")
 
@@ -76,5 +82,7 @@ def pull_indices():
         download_blob("symptomizer_indices_bucket-1", "tfidf.index", "models/tfidf.index")
         download_blob("symptomizer_indices_bucket-1", "bert.index", "models/bert.index")
         download_blob("symptomizer_indices_bucket-1", "ids.joblib", "models/ids.joblib")
+        download_blob("symptomizer_indices_bucket-1", "tfidf_model.joblib", "models/tfidf_model.joblib")
     else:
         print("No PULL_INDS env found. Rebuilding indices")
+

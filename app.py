@@ -3,7 +3,7 @@ from typing import List, Dict, Any
 from search import *
 from build import *
 from utils import docs2text, id2details
-from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices
+from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices, download_pytorch_model
 
 # from deeppavlov import build_model
 # dp_model = build_model('models/squad_torch_bert.json', download=True)
@@ -16,7 +16,7 @@ from cloud_storage import test_file_exists, download_blob, upload_blob, pull_ind
 # GCP test connections
 test_file_exists()
 download_blob("symptomizer_indices_bucket-1", "hello.txt", "test.txt")
-
+download_pytorch_model()
 pull_indices()
 
 bert_model = load_bert_model()
