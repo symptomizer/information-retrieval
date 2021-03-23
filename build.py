@@ -135,7 +135,8 @@ def load_bert_model():
 def build_faiss(tfidf_model, bert_model):
     tr = tracker.SummaryTracker()
     print(f"Building indices ...")
-    c = collection.find().count()
+    # c = collection.find().count()
+    c = 1000
     batch_size = 500
     encoder = None
     bert_index =  None
@@ -182,7 +183,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    upload_indices_and_vectors()
+    # upload_indices_and_vectors()
     return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):

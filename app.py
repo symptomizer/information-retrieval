@@ -25,11 +25,6 @@ tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
 ids = load('models/ids.joblib')
 qa_model = QA('models')
 
-@strawberry.type
-class User:
-    name: str
-    age: int
-
 
 @strawberry.type
 class Document:
@@ -53,6 +48,17 @@ class SearchResult:
 class QAResult:
     answer: str
     confidence : float
+
+
+@strawberry.type
+class MetaData:
+    tf_idf_len_diff: int
+    bert_len_diff: int
+
+@strawberry.type
+class IndexingResult:
+    status: str
+    metadata: MetaData
 
 @strawberry.type
 class Query:
@@ -79,5 +85,28 @@ class Query:
         reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
         answer = qa_model.predict(" ".join(reference),q)
         return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
+
+    @strawberry.field
+    def pull_updates_from_index_cloud(self) -> IndexingResult:
+        global tfidf_faiss, bert_faiss, ids, qa_model
+        tf_idf_prev_len = tfidf_faiss.ntotal
+        bert_prev_len = bert_faiss.ntotal
+        
+        print("Previous TFIDF length: {}".format(tf_idf_prev_len))
+        pull_indices(True)
+        
+        tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
+        ids = load('models/ids.joblib')
+        qa_model = QA('models')
+
+        metadata = {'tfidf_len_diff': tfidf_faiss.ntotal - tf_idf_prev_len, 'bert_len_diff': bert_faiss.ntotal - bert_prev_len}
+        return IndexingResult(status = "Success", metadata = metadata)
+
+    # @strawberry.field
+    # def reindex(self) -> IndexingResult:
+    #     D, I = vector_search(q, bert_model, bert_faiss)
+    #     reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
+    #     answer = qa_model.predict(" ".join(reference),q)
+    #     return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
 
 schema = strawberry.Schema(query=Query)
