@@ -97,9 +97,9 @@ class Query:
         
         tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
         ids = load('models/ids.joblib')
-        qa_model = QA('models')
+        # qa_model = QA('models')
 
-        metadata = {'tfidf_len_diff': tfidf_faiss.ntotal - tf_idf_prev_len, 'bert_len_diff': bert_faiss.ntotal - bert_prev_len}
+        metadata = MetaData(tf_idf_len_diff = tf_idf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
         return IndexingResult(status = "Success", metadata = metadata)
 
     # @strawberry.field
