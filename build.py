@@ -104,11 +104,14 @@ mongo_query = lambda i,batch_size: [
 #             yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
 
 def upload_indices_and_vectors():
-    upload_blob("symptomizer_indices_bucket-1", "models/bert.index", "bert.index")
-    upload_blob("symptomizer_indices_bucket-1", "models/tfidf.index", "tfidf.index")
-    upload_blob("symptomizer_indices_bucket-1", "models/ids.joblib", "ids.joblib")
-    upload_blob("symptomizer_indices_bucket-1", "models/tfidf_model.joblib", "tfidf_model.joblib")
-    print("Completed Uploading indices to bucket")
+    # Checks if PULL_INDS environment variable is present, and calls pull function
+    if os.environ.get('PUSH_INDS') != None:
+        upload_blob("symptomizer_indices_bucket-1", "models/bert.index", "bert.index")
+        upload_blob("symptomizer_indices_bucket-1", "models/tfidf.index", "tfidf.index")
+        upload_blob("symptomizer_indices_bucket-1", "models/ids.joblib", "ids.joblib")
+        upload_blob("symptomizer_indices_bucket-1", "models/tfidf_model.joblib", "tfidf_model.joblib")
+    else:
+        print("No PUSH_INDS env found. Not pushing new index.")
 
 def read_stop_words():
     stop_words = []
@@ -226,7 +229,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    # upload_indices_and_vectors()
+    upload_indices_and_vectors()
     return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):
