@@ -70,22 +70,25 @@ mongo_query = lambda i,batch_size: [
     { "$skip": i }
 ]
 
-def build_faiss(tfidf_model, bert_model):
-    tr = tracker.SummaryTracker()
-    print(f"Building indices ...")
-    c = collection.find().count()
-    current_n = tfidf_model.n
-    # c = 1000
+def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
+    print(f"Updating indices ...")
+    current_n = tfidf_faiss.ntotal
+    current_bert_n = bert_faiss.ntotal
+    print("Current index size: {}".format(current_n))
+    if(current_n != current_bert_n):
+        print('Something has badly broken.')
+    # c = collection.find().count()
+    c = 2000
     batch_size = 500
     encoder = None
-    bert_index =  None
-    tfidf_index = None
+    bert_index =  tfidf_faiss
+    tfidf_index = bert_faiss
     # if hasattr(model, 'encode'):
     #     encoder =  lambda x: model.encode(x).astype("float32")
     # else:
     #     encoder = lambda x:model.transform(x).toarray().astype("float32")
-    i = 0
-    ids = []
+    i = current_n
+    ids = id_arr
     while i < c:
         print(i)
         docs = []
@@ -93,20 +96,16 @@ def build_faiss(tfidf_model, bert_model):
             # docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
             docs.append(x['text'] or "")
             ids.append(x['_id'])
-        print("Downloaded batch",i)
+        print("Downloaded batch ",i)
         tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
         print("Computed tfidf embeddings")
-        bert_embeddings = bert_model.encode([doc[:100] for doc  in docs]).astype("float32")
+        bert_embeddings = bert_model.encode([doc[:400] for doc  in docs]).astype("float32")
         print("Computed bert embeddings")
-        if i == 0:
-            bert_index = faiss.IndexFlatIP(bert_embeddings.shape[1])
-            tfidf_index = faiss.IndexFlatIP(tfidf_embeddings.shape[1])
             
         # print(bert_embeddings.shape[1])
         # print(tfidf_embeddings.shape[1])
         faiss.normalize_L2(bert_embeddings)
         faiss.normalize_L2(tfidf_embeddings)
-        print(tr.print_diff())
 
         # Step 3: Pass the index to IndexIDMap
         # index = faiss.IndexIDMap(index)
@@ -123,10 +122,4 @@ def build_faiss(tfidf_model, bert_model):
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
     # upload_indices_and_vectors()
-    return [tfidf_index, bert_index]
-
-def load_faiss(tfidf_model, bert_model):
-    if path.exists(f"models/bert.index") and path.exists(f"models/tfidf.index"):
-        return [faiss.read_index(f"models/tfidf.index"),faiss.read_index(f"models/bert.index")]
-    else:
-        return build_faiss(tfidf_model, bert_model)
+    return [tfidf_index, bert_index, ids]

@@ -4,6 +4,7 @@ from search import *
 from build import *
 from utils import docs2text, id2details
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices, download_pytorch_model
+from live_indexing import update_faiss
 
 # from deeppavlov import build_model
 # dp_model = build_model('models/squad_torch_bert.json', download=True)
@@ -64,6 +65,7 @@ class IndexingResult:
 class Query:
     @strawberry.field
     def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
+        print("Number of Total Documents: {}".format(tfidf_faiss.ntotal))
         D1, I1 = vector_search(q, tfidf_model, tfidf_faiss)
         D2, I2 = vector_search(q, bert_model, bert_faiss)
         # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
@@ -88,7 +90,7 @@ class Query:
 
     @strawberry.field
     def pull_updates_from_index_cloud(self) -> IndexingResult:
-        global tfidf_faiss, bert_faiss, ids, qa_model
+        global tfidf_faiss, bert_faiss, ids
         tf_idf_prev_len = tfidf_faiss.ntotal
         bert_prev_len = bert_faiss.ntotal
         
@@ -97,16 +99,22 @@ class Query:
         
         tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
         ids = load('models/ids.joblib')
-        # qa_model = QA('models')
 
         metadata = MetaData(tf_idf_len_diff = tf_idf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
         return IndexingResult(status = "Success", metadata = metadata)
 
-    # @strawberry.field
-    # def reindex(self) -> IndexingResult:
-    #     D, I = vector_search(q, bert_model, bert_faiss)
-    #     reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
-    #     answer = qa_model.predict(" ".join(reference),q)
-    #     return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
+    @strawberry.field
+    def reindex(self) -> IndexingResult:
+        global bert_model, tfidf_model, tfidf_faiss, bert_faiss, ids
+        tf_idf_prev_len = tfidf_faiss.ntotal
+        bert_prev_len = bert_faiss.ntotal
+        
+        print("Previous TFIDF length: {}".format(tf_idf_prev_len))
+
+
+        tfidf_faiss, bert_faiss, ids = update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, ids)
+        metadata = MetaData(tf_idf_len_diff = tf_idf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
+
+        return IndexingResult(status = "Success", metadata = metadata)
 
 schema = strawberry.Schema(query=Query)
