@@ -25,17 +25,17 @@ def vector_search(q, model, index, k=10):
     # return [list(df[df._id == idx][column]) for idx in I[0]]
 
 
-def combine_results(D1, I1, D2, I2):
+def combine_results(D1_np, I1_np, D2_np, I2_np):
     """
     D1: Scores for TFIDF
     I1: IDs for TFIDF
     D2: Scores for Bert
     I2: IDs for Bert
     """
-    D1 = D1[0]
-    I1 = I1[0]
-    D2 = I2[0]
-    D2 = D2[0]
+    D1 = D1_np[0].to_list()
+    I1 = I1_np[0].to_list()
+    D2 = I2_np[0].to_list()
+    D2 = D2_np[0].to_list()
 
     combined_zips = []
 
@@ -56,4 +56,11 @@ def combine_results(D1, I1, D2, I2):
  
     print("After Combined:")
     print(combined_zips)
-    # sorted_results = [x[1] for x in sorted(( +), key = lambda x:x[0])]
+
+    sorted_results = [doc_score_tup[0] for doc_score_tup in sorted(combined_zips, key = lambda x:x[1])]
+    
+    print("Sorted Combined:")
+    print(sorted_results)
+
+    return r
+    
