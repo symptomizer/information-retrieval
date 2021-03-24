@@ -81,8 +81,8 @@ def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     c = 2000
     batch_size = 500
     encoder = None
-    bert_index =  tfidf_faiss
-    tfidf_index = bert_faiss
+    bert_index = bert_faiss
+    tfidf_index = tfidf_faiss
     # if hasattr(model, 'encode'):
     #     encoder =  lambda x: model.encode(x).astype("float32")
     # else:

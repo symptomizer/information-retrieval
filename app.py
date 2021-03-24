@@ -100,7 +100,7 @@ class Query:
         tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
         ids = load('models/ids.joblib')
 
-        metadata = MetaData(tf_idf_len_diff = tf_idf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
+        metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
         return IndexingResult(status = "Success", metadata = metadata)
 
     @strawberry.field
@@ -113,7 +113,7 @@ class Query:
 
 
         tfidf_faiss, bert_faiss, ids = update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, ids)
-        metadata = MetaData(tf_idf_len_diff = tf_idf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
+        metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
 
         return IndexingResult(status = "Success", metadata = metadata)
 
