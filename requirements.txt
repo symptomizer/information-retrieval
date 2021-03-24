@@ -13,3 +13,5 @@ sentence-transformers
 pytorch_transformers
 dask[complete]
 Pympler
+google-cloud-storage
+wget

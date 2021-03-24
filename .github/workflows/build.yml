@@ -13,6 +13,7 @@ jobs:
       BRANCH: ${GITHUB_REF##*/}
       SERVICE_NAME: information-retrieval
       PROJECT_ID: ${{ secrets.PROJECT_ID }}
+      BUCKET_KEY: ${{ secrets.GCP_BUCKET_KEY }}
 
     steps:
       - name: Checkout
@@ -31,7 +32,7 @@ jobs:
       # Build docker image
       - name: Image
         run: |-
-          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA .
+          docker build -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA --build-arg key_file="$BUCKET_KEY" .
           
       # Configure docker to use the gcloud command-line tool as a credential helper
       - run: |
@@ -49,6 +50,7 @@ jobs:
         HASH: $(git rev-parse --short "$GITHUB_SHA")
         BRANCH: ${GITHUB_REF##*/}
         SERVICE_NAME: information-retrieval
+        SERVICE_KEY: ${{ secrets.GCP_SA_KEY }}
         PROJECT_ID: ${{ secrets.PROJECT_ID }}
       
       steps:
@@ -60,6 +62,6 @@ jobs:
               export_default_credentials: true
 
         - name: Deploy
-          run: gcloud compute ssh --zone europe-west2-c information-retrieval-vm --command 'sudo usermod -aG docker $USER && newgrp docker && echo ${{ secrets.GCP_SA_KEY }} | docker login -u _json_key --password-stdin https://eu.gcr.io && docker stop $(docker ps -a -q) && docker pull eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA && docker run -d -P eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA'
+          run: gcloud compute ssh --quiet --zone europe-west2-c information-retrieval-vm --command 'sudo usermod -aG docker $USER && newgrp docker && docker login -u _json_key -p $SERVICE_KEY https://eu.gcr.io && docker stop $(docker ps -a -q) && docker pull eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA && docker run -d -P eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA'
 
 
