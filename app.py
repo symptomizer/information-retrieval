@@ -65,19 +65,36 @@ class Query:
         # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
         combined_results = combine_results(D1, I1, D2, I2)
         # I = list(set([x[1] for x in sorted((list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])]))
-        I = list(
-                set(
-                    [x[1] for x in sorted(
-                        (list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])
-                        ]
-                    )
-                )
-        print(I)
-        filters = {'language':language, '_id': {'$in': (np.array(ids)[I[:10]]).tolist()}}
+        # I = list(
+        #         set(
+        #             [x[1] for x in sorted(
+        #                 (list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])
+        #                 ]
+        #             )
+        #         )
+        id_arr = (np.array(ids)[combined_results]).tolist()
+        # print("New: {}".format(id_arr))
+        # I = combined_results
+        filters = {'language':language, '_id': {'$in': id_arr}}
         if not type is None:
             filters['type'] = type
-        documents = collection.find( filters)
-        return SearchResult([Document(id=doc['_id'], title=doc['title'].encode('latin1').decode('utf8'),description=doc['description'], content=doc['content']['text'], url=doc['url'],directURL=doc['directURL'], type=doc['type'], language=doc['language'], rights=doc['rights'], datePublished=doc['datePublished'], dateAdded=doc['dateIndexed']) for doc in documents])
+        documents = list(collection.find(filters))
+
+
+        # things = list(db.things.find({'_id': {'$in': id_array}}))
+        documents.sort(key=lambda doc: id_arr.index(doc['_id']))
+        return SearchResult([Document(id=doc['_id'], 
+        title=doc['title'].encode('latin1').decode('utf8'),
+        description=doc['description'], 
+        content=doc['content']['text'], 
+        url=doc['url'],
+        directURL=doc['directURL'], 
+        type=doc['type'], 
+        language=doc['language'], 
+        rights="", 
+        datePublished=doc['datePublished'], 
+        dateAdded=doc['dateIndexed']) for doc in documents])
+
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
@@ -88,6 +105,6 @@ class Query:
         D, I = vector_search(q, bert_model, bert_faiss)
         reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
         answer = qa_model.predict(" ".join(reference),q)
-        return QAResult(answer = answer['answer'], confidence = answer['confidence'], )
+        return QAResult(answer = answer['answer'], confidence = answer['confidence'])
 
 schema = strawberry.Schema(query=Query)

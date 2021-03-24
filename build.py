@@ -110,10 +110,53 @@ def upload_indices_and_vectors():
     upload_blob("symptomizer_indices_bucket-1", "models/tfidf_model.joblib", "tfidf_model.joblib")
     print("Completed Uploading indices to bucket")
 
-def build_tfidf_model(num_docs=2000, max_features=1500):
+def read_stop_words():
+    stop_words = []
+    with open("EnglishStopWords.txt", 'r',  encoding='utf-8', errors='ignore') as f:
+        read_file = f.readlines()
+        for word in read_file:
+            stop_words.append(word.strip())
+    
+    return {key: None for key in stop_words}
+
+def pull_and_preprocess_from_mongo(start_index, num_docs):
+    
+    stemmer = EnglishStemmer()
+    html_tag_regex = re.compile('<.*?>')
+    non_word_regex = re.compile('[^\w\']')
+    non_alpha_numeric_chars = re.compile('[^a-z-A-Z-0-9\' ]')
+
+    stopwords = read_stop_words()
+    docs = collection.aggregate(mongo_query(start_index, num_docs))
+    doc_list = []
+    id_list = []
+    for doc in docs:
+        # HTML stripped
+        html_stripped = re.sub(html_tag_regex, '', doc['text'] or "")
+        # Tokenize and remove odd/nonalphanumeric characters. (except for unknown characters by the regex)
+        newline_removed = " ".join(re.split(non_word_regex,html_stripped))
+        #clean text from leftover unkown characters
+        stripped_string = re.sub(non_alpha_numeric_chars, "", newline_removed)
+        # stopword removal
+        stripped_no_stopword = [word for word in stripped_string.split() if not word in stopwords]
+        #remove extra empti strings left after last removal
+        stripped_string = " ".join(stripped_no_stopword)
+        # Lowercasing.
+        lowercased_string = stripped_string.lower()
+        # Stemming
+        stemmed_text = " ".join([stemmer.stem(word) for word in lowercased_string.split()])
+        doc_list.append(stemmed_text)
+        id_list.append(doc['_id'])
+            
+    return list(zip(doc_list, id_list))
+
+
+def build_tfidf_model(num_docs=2000, max_features=3000):
     print("Building TF-IDF model...")
     model = TfidfVectorizer(ngram_range=(3,5), max_features=max_features, analyzer="char")
-    model.fit((x['text'] or "" for x in collection.aggregate(mongo_query(0,num_docs))))
+    data = pull_and_preprocess_from_mongo(0, num_docs)
+    docs = [text for (text, ind) in data]
+    model.fit(docs)
     dump(model, 'models/tfidf_model.joblib') 
     print("Saved TF-IDF model to models/tfidf_model.joblib.")
     return model
@@ -136,6 +179,7 @@ def build_faiss(tfidf_model, bert_model):
     tr = tracker.SummaryTracker()
     print(f"Building indices ...")
     c = collection.find().count()
+    # c = 5000
     batch_size = 500
     encoder = None
     bert_index =  None
@@ -149,10 +193,10 @@ def build_faiss(tfidf_model, bert_model):
     while i < c:
         print(i)
         docs = []
-        for x in collection.aggregate(mongo_query(i,batch_size)) :
+        for text, ind in pull_and_preprocess_from_mongo(i,batch_size):
             # docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
-            docs.append(x['text'] or "")
-            ids.append(x['_id'])
+            docs.append(text)
+            ids.append(ind)
         print("Downloaded batch",i)
         tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
         print("Computed tfidf embeddings")
@@ -182,7 +226,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    upload_indices_and_vectors()
+    # upload_indices_and_vectors()
     return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):
