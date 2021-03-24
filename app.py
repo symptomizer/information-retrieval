@@ -49,11 +49,21 @@ class QAResult:
 class Query:
     @strawberry.field
     def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
-        D1, I1 = vector_search(q, tfidf_model, tfidf_faiss)
-        D2, I2 = vector_search(q, bert_model, bert_faiss)
-        # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
+        number_of_results = 20
 
-        I = list(set([x[1] for x in sorted((list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])]))
+        D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
+        D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
+        # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
+        combined_results = combine_results(D1, I1, D2, I2)
+        # I = list(set([x[1] for x in sorted((list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])]))
+        I = list(
+                set(
+                    [x[1] for x in sorted(
+                        (list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])
+                        ]
+                    )
+                )
+        print(I)
         filters = {'language':language, '_id': {'$in': (np.array(ids)[I[:10]]).tolist()}}
         if not type is None:
             filters['type'] = type
