@@ -17,6 +17,9 @@ stemmer = EnglishStemmer()
 def preprocess_string(text, stopping = True, stemming = True, lowercasing = True):
     global stop_words
     global stemmer
+    if not text:
+        text = ""
+    # print(f"Input to preprocesser: {text}")
     text = text.encode("utf-8",errors="ingore").decode("utf-8", errors="ingore")
     # text = unicode(text, errors='ignore')
     html_tag_regex = re.compile('<.*?>')
@@ -24,7 +27,7 @@ def preprocess_string(text, stopping = True, stemming = True, lowercasing = True
     non_alpha_numeric_chars = re.compile('[^a-z-A-Z-0-9\' ]')
 
     # HTML stripped
-    html_stripped_string = re.sub(html_tag_regex, '', text)
+    html_stripped_string = re.sub(html_tag_regex, ' ', text)
     # Tokenize and remove odd/nonalphanumeric characters. (except for unknown characters by the regex)
     newline_removed_string = " ".join(re.split(non_word_regex,html_stripped_string))
     #clean text from leftover unkown characters

@@ -62,16 +62,9 @@ class Query:
 
         D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
         D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
-        # D2, I2 = vector_search(q, tfidf_model, tfidf_faiss)
+
         combined_results = combine_results(D1, I1, D2, I2)
-        # I = list(set([x[1] for x in sorted((list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])]))
-        # I = list(
-        #         set(
-        #             [x[1] for x in sorted(
-        #                 (list(zip(0.25*D1[0],I1[0])) + list(zip(0.75*D2[0],I2[0]))), key = lambda x:x[0])
-        #                 ]
-        #             )
-        #         )
+       
         id_arr = (np.array(ids)[combined_results]).tolist()
         # print("New: {}".format(id_arr))
         # I = combined_results
@@ -80,13 +73,32 @@ class Query:
             filters['type'] = type
         documents = list(collection.find(filters))
 
+        def ensure_good_content(content_list):
+            '''
+            function to remove potential problems from the context, and preprocess it to look like normal text
+            '''
+            # remove None-s from the list
+            string_list = map(str,content_list)
+            # preprocess and join together the content list
+            string_list = preprocess_string(" ".join(string_list), stopping = False, stemming = False, lowercasing = False)
+            return [string_list]
+        
+        # def ensure_good_content(content_list):
+        #     '''
+        #     function to remove potential problems from the context, and preprocess it to look like normal text
+        #     '''
+        #     # remove None-s from the list
+        #     string_list = map(str,content_list)
+        #     # preprocess and join together the content list
+        #     string_list = [preprocess_string(page, stopping = False, stemming = False, lowercasing = False) for page in string_list ]
+        #     return [string_list]
 
         # things = list(db.things.find({'_id': {'$in': id_array}}))
         documents.sort(key=lambda doc: id_arr.index(doc['_id']))
         return SearchResult([Document(id=doc['_id'], 
         title=doc['title'].encode('latin1').decode('utf8'),
         description=doc['description'], 
-        content=doc['content']['text'], 
+        content= ensure_good_content(doc['content']['text']),
         url=doc['url'],
         directURL=doc['directURL'], 
         type=doc['type'], 
