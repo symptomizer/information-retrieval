@@ -50,3 +50,14 @@ def preprocess_string(text, stopping = True, stemming = True, lowercasing = True
         temp_string = " ".join([stemmer.stem(word) for word in temp_string.split()])
 
     return temp_string
+
+def preprocess_QA_text(text):
+    if not text:
+        text = ""
+    text = text.encode("utf-8",errors="ingore").decode("utf-8", errors="ingore")
+    # html removal
+    clean_text = re.sub('<.*?>', ' ', text)
+    # remove other special characters except thos helping the meaning of a sentence
+    clean_text = re.sub('[^a-zA-Z0-9,\'.?!:\-()\[\] ]', '', clean_text)
+    return clean_text
+

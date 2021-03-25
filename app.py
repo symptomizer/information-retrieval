@@ -4,7 +4,7 @@ from search import *
 from build import *
 from utils import docs2text, id2details
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices, download_pytorch_model
-
+from preprocessing import preprocess_QA_text, preprocess_string
 # from deeppavlov import build_model
 # dp_model = build_model('models/squad_torch_bert.json', download=True)
 
@@ -82,7 +82,7 @@ class Query:
             # preprocess and join together the content list
             string_list = preprocess_string(" ".join(string_list), stopping = False, stemming = False, lowercasing = False)
             return [string_list]
-        
+
         # def ensure_good_content(content_list):
         #     '''
         #     function to remove potential problems from the context, and preprocess it to look like normal text
@@ -114,9 +114,18 @@ class Query:
 
     @strawberry.field
     def qa(self, q: str) -> QAResult:
+        # Find top 2 relevant documents
         D, I = vector_search(q, bert_model, bert_faiss)
         reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:2]]).tolist()}})]
-        answer = qa_model.predict(" ".join(reference),q)
+
+        # preprocess docs before search
+        qa_clean_q = preprocess_string(q, lowercasing=False, stemming=False, stopping=False)
+        print(f"Raw references in QA: {reference}")
+        clean_refs = [preprocess_QA_text(ref) for ref in reference]
+        print(f"Cleaned references to search in: {clean_refs}")
+        # answer = qa_model.predict(" ".join(clean_refs), qa_clean_q)
+        answer = qa_model.predict(" ".join(clean_refs), qa_clean_q)
+
         return QAResult(answer = answer['answer'], confidence = answer['confidence'])
 
 schema = strawberry.Schema(query=Query)
