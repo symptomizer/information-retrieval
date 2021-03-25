@@ -8,15 +8,17 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics.pairwise import euclidean_distances
 from build import *
 import faiss
+from preprocessing import preprocess_string
 
 
 def vector_search(q, model, index, k=10):
-
+    processed_q = preprocess_string(q)
+    print("Query preprocessed")
     vector = []
     if hasattr(model, 'encode'):
-        vector = model.encode([q])
+        vector = model.encode([processed_q])
     else:
-        vector = model.transform([q]).toarray()
+        vector = model.transform([processed_q]).toarray()
     vector = vector.astype("float32")
     faiss.normalize_L2(vector)
     D, I = index.search(vector, k=k)

@@ -37,6 +37,7 @@ from os import path
 import os 
 
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices
+from preprocessing import preprocess_string, read_stop_words
 
 # delete_disk_caches_for_function('get_data')
 collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
@@ -103,6 +104,7 @@ mongo_query = lambda i,batch_size: [
 #         else:
 #             yield collection.find(query,projection)[chunks[i-1]:chunks.stop]
 
+
 def upload_indices_and_vectors():
     # Checks if PULL_INDS environment variable is present, and calls pull function
     if os.environ.get('PUSH_INDS') != None:
@@ -113,42 +115,15 @@ def upload_indices_and_vectors():
     else:
         print("No PUSH_INDS env found. Not pushing new index.")
 
-def read_stop_words():
-    stop_words = []
-    with open("EnglishStopWords.txt", 'r',  encoding='utf-8', errors='ignore') as f:
-        read_file = f.readlines()
-        for word in read_file:
-            stop_words.append(word.strip())
-    
-    return {key: None for key in stop_words}
 
 def pull_and_preprocess_from_mongo(start_index, num_docs):
     
-    stemmer = EnglishStemmer()
-    html_tag_regex = re.compile('<.*?>')
-    non_word_regex = re.compile('[^\w\']')
-    non_alpha_numeric_chars = re.compile('[^a-z-A-Z-0-9\' ]')
-
-    stopwords = read_stop_words()
     docs = collection.aggregate(mongo_query(start_index, num_docs))
     doc_list = []
     id_list = []
     for doc in docs:
-        # HTML stripped
-        html_stripped = re.sub(html_tag_regex, '', doc['text'] or "")
-        # Tokenize and remove odd/nonalphanumeric characters. (except for unknown characters by the regex)
-        newline_removed = " ".join(re.split(non_word_regex,html_stripped))
-        #clean text from leftover unkown characters
-        stripped_string = re.sub(non_alpha_numeric_chars, "", newline_removed)
-        # stopword removal
-        stripped_no_stopword = [word for word in stripped_string.split() if not word in stopwords]
-        #remove extra empti strings left after last removal
-        stripped_string = " ".join(stripped_no_stopword)
-        # Lowercasing.
-        lowercased_string = stripped_string.lower()
-        # Stemming
-        stemmed_text = " ".join([stemmer.stem(word) for word in lowercased_string.split()])
-        doc_list.append(stemmed_text)
+        clean_text = preprocess_string(doc['text'] or "", stopping = True, stemming = True, lowercasing = True)
+        doc_list.append(clean_text)
         id_list.append(doc['_id'])
             
     return list(zip(doc_list, id_list))
