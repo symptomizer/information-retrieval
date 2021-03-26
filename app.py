@@ -4,7 +4,8 @@ from search import *
 from build import *
 from utils import docs2text, id2details
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices, download_pytorch_model
-from preprocessing import preprocess_QA_text, preprocess_string
+from preprocessing import preprocess_QA_text, preprocess_string, ensure_good_content
+from bson import ObjectId
 # from deeppavlov import build_model
 # dp_model = build_model('models/squad_torch_bert.json', download=True)
 
@@ -56,6 +57,7 @@ class QAResult:
 
 @strawberry.type
 class Query:
+
     @strawberry.field
     def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
         number_of_results = 20
@@ -73,15 +75,6 @@ class Query:
             filters['type'] = type
         documents = list(collection.find(filters))
 
-        def ensure_good_content(content_list):
-            '''
-            function to remove potential problems from the context, and preprocess it to look like normal text
-            '''
-            # remove None-s from the list
-            string_list = map(str,content_list)
-            # preprocess and join together the content list
-            string_list = preprocess_string(" ".join(string_list), stopping = False, stemming = False, lowercasing = False)
-            return [string_list]
 
         # def ensure_good_content(content_list):
         #     '''
@@ -107,6 +100,24 @@ class Query:
         datePublished=doc['datePublished'], 
         dateAdded=doc['dateIndexed']) for doc in documents])
 
+    @strawberry.field
+    def more_docs(self, id: str) -> SearchResult:
+        doc = list(collection.find({'_id': ObjectId(id)}))[0]
+        D, I = vector_search(doc['title']+doc['description'], bert_model, bert_faiss, k = 10)
+        id_arr = (np.array(ids)[I[0]]).tolist()
+        documents = list(collection.find({'_id': {'$in': id_arr}}))
+        
+        return SearchResult([Document(id=doc['_id'], 
+        title=doc['title'].encode('latin1').decode('utf8'),
+        description=doc['description'], 
+        content= ensure_good_content(doc['content']['text']),
+        url=doc['url'],
+        directURL=doc['directURL'], 
+        type=doc['type'], 
+        language=doc['language'], 
+        rights="", 
+        datePublished=doc['datePublished'], 
+        dateAdded=doc['dateIndexed']) for doc in documents])
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
