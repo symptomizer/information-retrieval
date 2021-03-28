@@ -157,7 +157,7 @@ def build_faiss(tfidf_model, bert_model):
         print("Downloaded batch",i)
         tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
         print("Computed tfidf embeddings")
-        bert_embeddings = bert_model.encode([doc[:400] for doc  in docs]).astype("float32")
+        bert_embeddings = bert_model.encode([doc[:100] for doc  in docs]).astype("float32")
         print("Computed bert embeddings")
         if i == 0:
             bert_index = faiss.IndexFlatIP(bert_embeddings.shape[1])

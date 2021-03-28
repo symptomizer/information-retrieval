@@ -99,7 +99,7 @@ def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
         print("Downloaded batch ",i)
         tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
         print("Computed tfidf embeddings")
-        bert_embeddings = bert_model.encode([doc[:400] for doc  in docs]).astype("float32")
+        bert_embeddings = bert_model.encode([doc[:100] for doc  in docs]).astype("float32")
         print("Computed bert embeddings")
             
         # print(bert_embeddings.shape[1])
