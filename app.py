@@ -102,19 +102,20 @@ class Query:
 
         metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
         return IndexingResult(status = "Success", metadata = metadata)
-
-    @strawberry.field
-    def reindex(self) -> IndexingResult:
-        global bert_model, tfidf_model, tfidf_faiss, bert_faiss, ids
-        tf_idf_prev_len = tfidf_faiss.ntotal
-        bert_prev_len = bert_faiss.ntotal
         
-        print("Previous TFIDF length: {}".format(tf_idf_prev_len))
+    if os.environ.get('REINDEXING_INSTANCE') != None:
+        @strawberry.field
+        def reindex(self) -> IndexingResult:
+            global bert_model, tfidf_model, tfidf_faiss, bert_faiss, ids
+            tf_idf_prev_len = tfidf_faiss.ntotal
+            bert_prev_len = bert_faiss.ntotal
+            
+            print("Previous TFIDF length: {}".format(tf_idf_prev_len))
 
 
-        tfidf_faiss, bert_faiss, ids = update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, ids)
-        metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
+            tfidf_faiss, bert_faiss, ids = update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, ids)
+            metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
 
-        return IndexingResult(status = "Success", metadata = metadata)
+            return IndexingResult(status = "Success", metadata = metadata)
 
 schema = strawberry.Schema(query=Query)
