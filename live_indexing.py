@@ -77,8 +77,8 @@ def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     print("Current index size: {}".format(current_n))
     if(current_n != current_bert_n):
         print('Something has badly broken.')
-    # c = collection.find().count()
-    c = 2000
+    c = collection.find().count()
+#     c = 2000
     batch_size = 500
     encoder = None
     bert_index = bert_faiss
