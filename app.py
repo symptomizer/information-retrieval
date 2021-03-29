@@ -4,7 +4,7 @@ from search import *
 from build import *
 from utils import docs2text, id2details
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices, download_pytorch_model
-from preprocessing import preprocess_QA_text, preprocess_string, ensure_good_content
+from preprocessing import preprocess_QA_text, preprocess_string, ensure_good_content, ensure_good_str_list, ensure_good_string, ensure_good_list
 from bson import ObjectId
 from live_indexing import update_faiss
 
@@ -28,20 +28,51 @@ tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
 ids = load('models/ids.joblib')
 qa_model = QA('models')
 
+@strawberry.type
+class Author:
+    url: str
+    name: str
+    email: str
+
+@strawberry.type
+class Image:
+    url: str
+    description: str
+    provider: str
+    license: str 
+
+@strawberry.type
+class Source:
+    id: str
+    name: str
+    description: str
+    url: str 
 
 @strawberry.type
 class Document:
     id: str
-    title: str
-    description: str
-    content: List[str]
-    rights: str
     url: str
-    language: str
-    type: str
     directURL: str
+    title: str
+    dateIndexed: str
+    type_: str
+    content: List[str]
+    alternateTitle: List[str]
+    fileName: str
+    authors: List[Author]
     datePublished: str
-    dateAdded: str
+    keywords: List[str]
+    description: str
+    alternateDescription: str
+    imageURLS: List[Image]
+    isbn: str
+    issn: str
+    doi: str
+    meshHeadings: List[str]
+    meshQualifiers: List[str]
+    source: Source
+    rights: str
+    language: str
 
 @strawberry.type
 class SearchResult:
@@ -63,6 +94,52 @@ class IndexingResult:
     status: str
     metadata: MetaData
 
+def serach_result_from_documents(documents):
+    return SearchResult(
+        [Document(
+            id = doc['_id'],  #ensure_good_string(doc, '_id'),
+            url = doc['url'], #ensure_good_string(doc,'url'),
+            directURL = doc['directURL'], #ensure_good_string(doc,'directURL'),
+            title = doc['title'].encode('latin1').decode('utf8'),
+            dateIndexed = doc['dateIndexed'], #ensure_good_string(doc,'dateIndexed'),
+            type_ = doc['type'], #ensure_good_string(doc,'type'),
+            content = ensure_good_content(doc['content']['text']), # note difference!
+            alternateTitle = ensure_good_str_list(doc,'alternateTitle'),
+            fileName = ensure_good_string(doc,'file_name'),
+            authors = [
+                Author(
+                    url = ensure_good_string(author,'url'),
+                    name = ensure_good_string(author,'name'),
+                    email = ensure_good_string(author,'email')
+                )
+                for author in ensure_good_list(doc, 'authors')],
+            datePublished = ensure_good_string(doc,'datePublished'),
+            keywords = ensure_good_str_list(doc,'keywords'),
+            description = ensure_good_string(doc,'description'),
+            alternateDescription = ensure_good_string(doc,'alternateDescription'),
+            imageURLS = [
+                Image(
+                    url = ensure_good_string(image,'url'),
+                    description = ensure_good_string(image,'description'),
+                    provider = ensure_good_string(image,'provider'),
+                    licence = ensure_good_string(image,'licence')
+                )
+                for image in ensure_good_list(doc, 'imageURLS')],
+            isbn = ensure_good_string(doc,'isbn'),
+            issn = ensure_good_string(doc,'issn'),
+            doi = ensure_good_string(doc,'doi'),
+            meshHeadings = ensure_good_str_list(doc,'meshHeadings'),
+            meshQualifiers = ensure_good_str_list(doc,'meshQualifiers'),
+            source = Source(
+                id = ensure_good_string(doc['source'],'id'),
+                name = ensure_good_string(doc['source'],'name'),
+                description = ensure_good_string(doc['source'],'description'),
+                url = ensure_good_string(doc['source'],'url')
+            ), #ensure_good_string(doc,'source'),
+            rights = "", #ensure_good_string(doc,'rights')
+            language = doc['language'], #ensure_good_string(doc,'language')
+        ) for doc in documents])
+
 @strawberry.type
 class Query:
 
@@ -83,30 +160,10 @@ class Query:
             filters['type'] = type
         documents = list(collection.find(filters))
 
-
-        # def ensure_good_content(content_list):
-        #     '''
-        #     function to remove potential problems from the context, and preprocess it to look like normal text
-        #     '''
-        #     # remove None-s from the list
-        #     string_list = map(str,content_list)
-        #     # preprocess and join together the content list
-        #     string_list = [preprocess_string(page, stopping = False, stemming = False, lowercasing = False) for page in string_list ]
-        #     return [string_list]
-
         # things = list(db.things.find({'_id': {'$in': id_array}}))
         documents.sort(key=lambda doc: id_arr.index(doc['_id']))
-        return SearchResult([Document(id=doc['_id'], 
-        title=doc['title'].encode('latin1').decode('utf8'),
-        description=doc['description'], 
-        content= ensure_good_content(doc['content']['text']),
-        url=doc['url'],
-        directURL=doc['directURL'], 
-        type=doc['type'], 
-        language=doc['language'], 
-        rights="", 
-        datePublished=doc['datePublished'], 
-        dateAdded=doc['dateIndexed']) for doc in documents])
+        return serach_result_from_documents(documents)
+        
 
     @strawberry.field
     def more_docs(self, id: str) -> SearchResult:
@@ -115,17 +172,8 @@ class Query:
         id_arr = (np.array(ids)[I[0]]).tolist()
         documents = list(collection.find({'_id': {'$in': id_arr}}))
         
-        return SearchResult([Document(id=doc['_id'], 
-        title=doc['title'].encode('latin1').decode('utf8'),
-        description=doc['description'], 
-        content= ensure_good_content(doc['content']['text']),
-        url=doc['url'],
-        directURL=doc['directURL'], 
-        type=doc['type'], 
-        language=doc['language'], 
-        rights="", 
-        datePublished=doc['datePublished'], 
-        dateAdded=doc['dateIndexed']) for doc in documents])
+        return serach_result_from_documents(documents)
+        
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
