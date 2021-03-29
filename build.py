@@ -204,7 +204,7 @@ def build_faiss(tfidf_model, bert_model):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    upload_indices_and_vectors()
+    # upload_indices_and_vectors()
     return [tfidf_index, bert_index]
 
 def load_faiss(tfidf_model, bert_model):

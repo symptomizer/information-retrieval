@@ -61,6 +61,20 @@ def preprocess_QA_text(text):
     clean_text = re.sub('[^a-zA-Z0-9,\'.?!:\-()\[\] ]', '', clean_text)
     return clean_text
 
+def ensure_good_string(doc, string):
+    # ensures that filed exists in doc and that it is not null, else returns ""
+    if string in doc and doc[string]:
+        return doc[string]
+    else:
+        return ""
+
+def ensure_good_str_list(doc, string):
+    if string in doc and doc[string]:
+        return [s if s is not None else "" for s in doc[string] ]
+    else:
+        return []
+    return 
+
 def ensure_good_content(content_list):
     '''
     function to remove potential problems from the context, and preprocess it to look like normal text
@@ -70,3 +84,9 @@ def ensure_good_content(content_list):
     # preprocess and join together the content list
     string_list = preprocess_string(" ".join(string_list), stopping = False, stemming = False, lowercasing = False)
     return [string_list]
+
+def ensure_good_list(doc, string):
+    if string in doc:
+        return doc[string]
+    else:
+        return []

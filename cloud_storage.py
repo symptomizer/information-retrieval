@@ -76,9 +76,9 @@ def download_blob(bucket_name, source_blob_name, destination_file_name):
         )
     )
 
-def pull_indices():
+def pull_indices(run_manually=False):
     # Checks if PULL_INDS environment variable is present, and calls pull function
-    if os.environ.get('PULL_INDS') != None:
+    if run_manually or os.environ.get('PULL_INDS') != None:
         download_blob("symptomizer_indices_bucket-1", "tfidf.index", "models/tfidf.index")
         download_blob("symptomizer_indices_bucket-1", "bert.index", "models/bert.index")
         download_blob("symptomizer_indices_bucket-1", "ids.joblib", "models/ids.joblib")

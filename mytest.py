@@ -1,5 +1,3 @@
-from build import pull_and_preprocess_from_mongo
+from preprocessing import ensure_good_str_list 
 
-print(pull_and_preprocess_from_mongo(0, 20)[2])
-
-
+print(ensure_good_str_list(["hello", None, "World"]))
