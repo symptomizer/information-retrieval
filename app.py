@@ -167,7 +167,7 @@ def main_search(q: str, language: str = 'en', type: str = None, limit: int = 20,
 class Query:
 
     @strawberry.field
-    def search(self, q: str, language: str = 'en', type: str = None, limit = 20) -> SearchResult:
+    def search(self, q: str, language: str = 'en', type: str = None, limit: int = 20) -> SearchResult:
         return serach_result_from_documents(main_search(q, language, type, limit))
 
 
@@ -189,7 +189,7 @@ class Query:
     def qa(self, q: str) -> QAResult:
         # Find top 2 relevant documents
         documents = main_search(q, sources=["nhs_az", "nhs_med", "nhs_covid19", "bnf"])
-        reference = [doc["description"] + " " + ensure_good_content(doc['content']['text'])[0][:min(300,len(ensure_good_content(doc['content']['text'])[0]))] for doc in documents[0:1]]
+        reference = [doc["description"] + " " + ensure_good_content(doc['content']['text'])[0][:min(300,len(ensure_good_content(doc['content']['text'])[0]))] for doc in documents[0:2]]
 
         # preprocess docs before search
         qa_clean_q = preprocess_string(q, lowercasing=False, stemming=False, stopping=False)
