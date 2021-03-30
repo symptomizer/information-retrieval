@@ -121,5 +121,5 @@ def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     faiss.write_index(tfidf_index,f"models/tfidf.index")
     dump(ids,'models/ids.joblib')
     print(f"Completed indices.")
-    # upload_indices_and_vectors()
+    upload_indices_and_vectors()
     return [tfidf_index, bert_index, ids]
