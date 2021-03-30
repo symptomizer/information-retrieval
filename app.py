@@ -142,29 +142,34 @@ def serach_result_from_documents(documents):
             language = doc['language'], #ensure_good_string(doc,'language')
         ) for doc in documents])
 
+
+def main_search(q: str, language: str = 'en', type: str = None, sources = None):
+    number_of_results = 20
+
+    D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
+    D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
+
+    combined_results = combine_results(D1, I1, D2, I2)
+
+    id_arr = (np.array(ids)[combined_results]).tolist()
+    # print("New: {}".format(id_arr))
+    # I = combined_results
+    filters = {'language':language, '_id': {'$in': id_arr}}
+    if not type is None:
+        filters['type'] = type
+    if not sources is None:
+        filters['source.id'] = {'$in' : sources}
+    documents = list(collection.find(filters))
+
+    # things = list(db.things.find({'_id': {'$in': id_array}}))
+    documents.sort(key=lambda doc: id_arr.index(doc['_id']))
+    return documents
 @strawberry.type
 class Query:
 
     @strawberry.field
     def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
-        number_of_results = 20
-
-        D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
-        D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
-
-        combined_results = combine_results(D1, I1, D2, I2)
-
-        id_arr = (np.array(ids)[combined_results]).tolist()
-        # print("New: {}".format(id_arr))
-        # I = combined_results
-        filters = {'language':language, '_id': {'$in': id_arr}}
-        if not type is None:
-            filters['type'] = type
-        documents = list(collection.find(filters))
-
-        # things = list(db.things.find({'_id': {'$in': id_array}}))
-        documents.sort(key=lambda doc: id_arr.index(doc['_id']))
-        return serach_result_from_documents(documents)
+        return serach_result_from_documents(main_search(q,language,type))
 
 
     @strawberry.field
@@ -184,8 +189,8 @@ class Query:
     @strawberry.field
     def qa(self, q: str) -> QAResult:
         # Find top 2 relevant documents
-        D, I = vector_search(q, bert_model, bert_faiss)
-        reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:3]]).tolist()},  'source.id': {'$in' : ["nhs_az", "nhs_med", "nhs_covid19", "bnf"]} })]
+        documents = main_search(q, sources=["nhs_az", "nhs_med", "nhs_covid19", "bnf"])
+        reference = [doc["description"] + " " + ensure_good_content(doc['content']['text'])[0][:min(300,len(ensure_good_content(doc['content']['text'])[0]))] for doc in documents[0:1]]
 
         # preprocess docs before search
         qa_clean_q = preprocess_string(q, lowercasing=False, stemming=False, stopping=False)
