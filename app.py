@@ -146,11 +146,10 @@ def serach_result_from_documents(documents):
 class Query:
 
     @strawberry.field
-    def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
-        number_of_results = 20
+    def search(self, q: str, language: str = 'en', type: str = None, limit: int = 20) -> SearchResult:
 
-        D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
-        D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
+        D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = limit)
+        D2, I2 = vector_search(q, bert_model, bert_faiss, k = limit)
 
         combined_results = combine_results(D1, I1, D2, I2)
 
