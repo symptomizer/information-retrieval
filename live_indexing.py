@@ -35,40 +35,9 @@ RawResult = collections.namedtuple("RawResult",
 
 from os import path
 import os 
-
+from build import upload_indices_and_vectors, pull_and_preprocess_from_mongo
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices
 
-# delete_disk_caches_for_function('get_data')
-collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
-mongo_query = lambda i,batch_size: [
-    {
-        '$project': {
-            'content': {
-                '$reduce': {
-                    'input': '$content.text', 
-                    'initialValue': '', 
-                    'in': {
-                        '$concat': [
-                            '$$value', ' ', '$$this'
-                        ]
-                    }
-                }
-            }, 
-            'title': 1, 
-            'description': 1
-        }
-    }, {
-        '$project': {
-            'text': {
-                '$concat': [
-                    '$title', ' ', '$description', ' ', '$content'
-                ]
-            }
-        }
-    },
-    { "$limit":  i+batch_size },
-    { "$skip": i }
-]
 
 def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     print(f"Updating indices ...")
@@ -92,10 +61,10 @@ def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     while i < c:
         print(i)
         docs = []
-        for x in collection.aggregate(mongo_query(i,batch_size)) :
+        for text, ind in pull_and_preprocess_from_mongo(i,batch_size):
             # docs.append(x.get("title","") + " " + x.get('description',"")+ " " + " ".join(filter(None,x.get('content',{}).get('text',[]))))
-            docs.append(x['text'] or "")
-            ids.append(x['_id'])
+            docs.append(text)
+            ids.append(ind)
         print("Downloaded batch ",i)
         tfidf_embeddings = tfidf_model.transform(docs).toarray().astype("float32")
         print("Computed tfidf embeddings")
