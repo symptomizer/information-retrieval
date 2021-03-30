@@ -143,11 +143,10 @@ def serach_result_from_documents(documents):
         ) for doc in documents])
 
 
-def main_search(q: str, language: str = 'en', type: str = None, sources = None):
-    number_of_results = 20
+def main_search(q: str, language: str = 'en', type: str = None, limit = 20, sources = None):
 
-    D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = number_of_results)
-    D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
+    D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = limit)
+    D2, I2 = vector_search(q, bert_model, bert_faiss, k = limit)
 
     combined_results = combine_results(D1, I1, D2, I2)
 
@@ -168,8 +167,8 @@ def main_search(q: str, language: str = 'en', type: str = None, sources = None):
 class Query:
 
     @strawberry.field
-    def search(self, q: str, language: str = 'en', type: str = None) -> SearchResult:
-        return serach_result_from_documents(main_search(q,language,type))
+    def search(self, q: str, language: str = 'en', type: str = None, limit = 20) -> SearchResult:
+        return serach_result_from_documents(main_search(q, language, type, limit))
 
 
     @strawberry.field
