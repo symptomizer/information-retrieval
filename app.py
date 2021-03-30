@@ -184,7 +184,7 @@ class Query:
     def qa(self, q: str) -> QAResult:
         # Find top 2 relevant documents
         D, I = vector_search(q, bert_model, bert_faiss)
-        reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:3]]).tolist()},  'source.id': "nhs_az"})]
+        reference = [x["description"] for x in collection.find({'_id': {'$in': (np.array(ids)[I[0][:3]]).tolist()},  'source.id': {'$in' : ["nhs_az", "nhs_med", "nhs_covid19", "bnf"]} })]
 
         # preprocess docs before search
         qa_clean_q = preprocess_string(q, lowercasing=False, stemming=False, stopping=False)
