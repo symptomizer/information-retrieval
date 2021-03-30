@@ -1,4 +1,6 @@
 import strawberry
+from strawberry.flask.views import GraphQLView
+from flask import Flask
 from typing import List, Dict, Any
 from search import *
 from build import *
@@ -39,14 +41,14 @@ class Image:
     url: str
     description: str
     provider: str
-    license: str 
+    license: str
 
 @strawberry.type
 class Source:
     id: str
     name: str
     description: str
-    url: str 
+    url: str
 
 @strawberry.type
 class Document:
@@ -151,7 +153,7 @@ class Query:
         D2, I2 = vector_search(q, bert_model, bert_faiss, k = number_of_results)
 
         combined_results = combine_results(D1, I1, D2, I2)
-       
+
         id_arr = (np.array(ids)[combined_results]).tolist()
         # print("New: {}".format(id_arr))
         # I = combined_results
@@ -163,7 +165,7 @@ class Query:
         # things = list(db.things.find({'_id': {'$in': id_array}}))
         documents.sort(key=lambda doc: id_arr.index(doc['_id']))
         return serach_result_from_documents(documents)
-        
+
 
     @strawberry.field
     def more_docs(self, id: str) -> SearchResult:
@@ -171,9 +173,9 @@ class Query:
         D, I = vector_search(doc['title']+doc['description'], bert_model, bert_faiss, k = 10)
         id_arr = (np.array(ids)[I[0]]).tolist()
         documents = list(collection.find({'_id': {'$in': id_arr}}))
-        
+
         return serach_result_from_documents(documents)
-        
+
     # @strawberry.field
     # def semantic_search(self, q: str) -> SearchResult:
     #     D, I = vector_search(q, bert_model, bert_faiss)
@@ -200,23 +202,23 @@ class Query:
         global tfidf_faiss, bert_faiss, ids
         tf_idf_prev_len = tfidf_faiss.ntotal
         bert_prev_len = bert_faiss.ntotal
-        
+
         print("Previous TFIDF length: {}".format(tf_idf_prev_len))
         pull_indices(True)
-        
+
         tfidf_faiss,  bert_faiss = load_faiss(tfidf_model, bert_model)
         ids = load('models/ids.joblib')
 
         metadata = MetaData(tf_idf_len_diff = tfidf_faiss.ntotal - tf_idf_prev_len, bert_len_diff = bert_faiss.ntotal - bert_prev_len)
         return IndexingResult(status = "Success", metadata = metadata)
-        
+
     if os.environ.get('REINDEXING_INSTANCE') != None:
         @strawberry.field
         def reindex(self) -> IndexingResult:
             global bert_model, tfidf_model, tfidf_faiss, bert_faiss, ids
             tf_idf_prev_len = tfidf_faiss.ntotal
             bert_prev_len = bert_faiss.ntotal
-            
+
             print("Previous TFIDF length: {}".format(tf_idf_prev_len))
 
 
@@ -226,3 +228,5 @@ class Query:
             return IndexingResult(status = "Success", metadata = metadata)
 
 schema = strawberry.Schema(query=Query)
+app = Flask(__name__)
+app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql_view', schema=schema))

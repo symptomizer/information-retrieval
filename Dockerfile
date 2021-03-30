@@ -13,4 +13,4 @@ COPY ./nltk_data /usr/local/nltk_data
 
 ENV PYTHONUNBUFFERED=1
 
-ENTRYPOINT strawberry server app
+ENTRYPOINT flask run
