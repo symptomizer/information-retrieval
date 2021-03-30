@@ -143,7 +143,7 @@ def serach_result_from_documents(documents):
         ) for doc in documents])
 
 
-def main_search(q: str, language: str = 'en', type: str = None, limit = 20, sources = None):
+def main_search(q: str, language: str = 'en', type: str = None, limit: int = 20, sources = None):
 
     D1, I1 = vector_search(q, tfidf_model, tfidf_faiss, k = limit)
     D2, I2 = vector_search(q, bert_model, bert_faiss, k = limit)
