@@ -118,7 +118,7 @@ def serach_result_from_documents(documents):
             type_ = doc['type'], #ensure_good_string(doc,'type'),
             content = ensure_good_content(doc['content']['text']), # note difference!
             alternateTitle = ensure_good_str_list(doc,'alternateTitle'),
-            fileName = ensure_good_string(doc,'file_name'),
+            fileName = ensure_good_string(doc,'fileName'),
             authors = [
                 Author(
                     url = ensure_good_string(author,'url'),
