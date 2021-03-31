@@ -37,6 +37,14 @@ class Author:
     email: str
 
 @strawberry.type
+class JournalReference:
+    title: str
+    volume: str
+    issue: str
+    start: str
+    end: str
+
+@strawberry.type
 class Image:
     url: str
     description: str
@@ -70,6 +78,10 @@ class Document:
     isbn: str
     issn: str
     doi: str
+    pubMedID: str
+    pmcID: str
+    publisher: str
+    journalReference: JournalReference
     meshHeadings: List[str]
     meshQualifiers: List[str]
     source: Source
@@ -126,10 +138,20 @@ def serach_result_from_documents(documents):
                     provider = ensure_good_string(image,'provider'),
                     licence = ensure_good_string(image,'licence')
                 )
-                for image in ensure_good_list(doc, 'imageURLS')],
+                for image in ensure_good_list(doc, 'imageURLs')],
             isbn = ensure_good_string(doc,'isbn'),
             issn = ensure_good_string(doc,'issn'),
-            doi = ensure_good_string(doc,'doi'),
+            doi=ensure_good_string(doc, 'doi'),
+            pubMedID=ensure_good_string(doc, 'pubMedID'),
+            pmcID=ensure_good_string(doc, 'pmcID'),
+            publisher=ensure_good_string(doc, 'publisher'),
+            journalReference=JournalReference(
+                title=ensure_good_string(doc.get('journalReference', {}), 'title'),
+                volume=ensure_good_string(doc.get('journalReference', {}), 'volume'),
+                issue=ensure_good_string(doc.get('journalReference', {}), 'issue'),
+                start=ensure_good_string(doc.get('journalReference', {}), 'start'),
+                end=ensure_good_string(doc.get('journalReference', {}), 'end'),
+            ),
             meshHeadings = ensure_good_str_list(doc,'meshHeadings'),
             meshQualifiers = ensure_good_str_list(doc,'meshQualifiers'),
             source = Source(
@@ -138,7 +160,7 @@ def serach_result_from_documents(documents):
                 description = ensure_good_string(doc['source'],'description'),
                 url = ensure_good_string(doc['source'],'url')
             ), #ensure_good_string(doc,'source'),
-            rights = "", #ensure_good_string(doc,'rights')
+            rights = ensure_good_string(doc,'rights'),
             language = doc['language'], #ensure_good_string(doc,'language')
         ) for doc in documents])
 
