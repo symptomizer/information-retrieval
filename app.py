@@ -183,13 +183,44 @@ def main_search(q: str, language: str = 'en', type: str = None, limit: int = 20,
     # things = list(db.things.find({'_id': {'$in': id_array}}))
     documents.sort(key=lambda doc: id_arr.index(doc['_id']))
     return documents
+
+def is_boolean_q(query: str):
+    char_list = ['\"',"AND","OR","NOT"]
+    do_bool_search = any([char in query for char in char_list])
+    return do_bool_search
+
+def phase_search(q: str, language: str = 'en', type: str = None, limit: int = 20):
+    from Boolean import queryParser
+    documents = main_search(q, language, type, 500)
+    string_list = []
+    for doc in documents:
+        if  "content" in doc and "text" in doc["content"]:
+            temp_str = ensure_good_string(doc, "title") + ensure_good_string(doc, "description") + ensure_good_content(doc['content']['text'])[0]
+            string_list.append(temp_str)
+        
+    bool_list = queryParser(q, string_list)
+
+    #get top <limit> results
+    results = []
+    for i in range(len(bool_list)):
+        if bool_list[i]:
+            if len(results)<limit:
+                results.append(documents[i])
+            else:
+                break
+    return results
+
+
 @strawberry.type
 class Query:
 
     @strawberry.field
     def search(self, q: str, language: str = 'en', type: str = None, limit: int = 20) -> SearchResult:
-        return serach_result_from_documents(main_search(q, language, type, limit))
-
+        if is_boolean_q(q):
+            print("Performing Boolean/Phrase search")
+            return serach_result_from_documents(phase_search(q, language, type, limit))
+        else:
+            return serach_result_from_documents(main_search(q, language, type, limit))
 
     @strawberry.field
     def more_docs(self, id: str) -> SearchResult:
