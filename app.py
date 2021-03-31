@@ -9,6 +9,7 @@ from cloud_storage import test_file_exists, download_blob, upload_blob, pull_ind
 from preprocessing import preprocess_QA_text, preprocess_string, ensure_good_content, ensure_good_str_list, ensure_good_string, ensure_good_list
 from bson import ObjectId
 from live_indexing import update_faiss
+from Boolean import queryParser
 
 # from deeppavlov import build_model
 # dp_model = build_model('models/squad_torch_bert.json', download=True)
@@ -190,7 +191,6 @@ def is_boolean_q(query: str):
     return do_bool_search
 
 def phase_search(q: str, language: str = 'en', type: str = None, limit: int = 20):
-    from Boolean import queryParser
     documents = main_search(q, language, type, 500)
     string_list = []
     for doc in documents:
