@@ -49,7 +49,6 @@ class Image:
     url: str
     description: str
     provider: str
-    license: str
 
 @strawberry.type
 class Source:
@@ -136,7 +135,6 @@ def serach_result_from_documents(documents):
                     url = ensure_good_string(image,'url'),
                     description = ensure_good_string(image,'description'),
                     provider = ensure_good_string(image,'provider'),
-                    licence = ensure_good_string(image,'licence')
                 )
                 for image in ensure_good_list(doc, 'imageURLs')],
             isbn = ensure_good_string(doc,'isbn'),
