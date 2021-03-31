@@ -38,6 +38,7 @@ import os
 from build import upload_indices_and_vectors, pull_and_preprocess_from_mongo
 from cloud_storage import test_file_exists, download_blob, upload_blob, pull_indices
 
+collection = pymongo.MongoClient('mongodb+srv://ir2:HUADLhhOLoCQ02VS@cluster1.xo9vl.mongodb.net/document?retryWrites=true&w=majority').document.document
 
 def update_faiss(tfidf_model, bert_model, tfidf_faiss, bert_faiss, id_arr):
     print(f"Updating indices ...")
