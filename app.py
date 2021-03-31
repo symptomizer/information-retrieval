@@ -114,7 +114,7 @@ def serach_result_from_documents(documents):
             id = doc['_id'],  #ensure_good_string(doc, '_id'),
             url = doc['url'], #ensure_good_string(doc,'url'),
             directURL = doc['directURL'], #ensure_good_string(doc,'directURL'),
-            title = doc['title'].encode('latin1').decode('utf8'),
+            title = doc['title'].encode('utf8').decode('utf8'),
             dateIndexed = doc['dateIndexed'], #ensure_good_string(doc,'dateIndexed'),
             type_ = doc['type'], #ensure_good_string(doc,'type'),
             content = ensure_good_content(doc['content']['text']), # note difference!
